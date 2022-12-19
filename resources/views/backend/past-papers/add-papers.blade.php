@@ -2,15 +2,22 @@
 @section('title', 'Dashboard')
 @section('content')
     <!-- Multi Columns Form -->
+    @if(session()->get('success'))
+        <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
+            <span><b> Success - </b> {{session()->get('success')}}</span>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <p style="font-size: 30px; font-weight: bold;">Past Papers - Add Lesson</p>
-    <form class="row g-3" method="post" action="#">
+    <form class="row g-3" method="post" action="{{route('create-papers')}}"  enctype="multipart/form-data">
+        @csrf
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Paper Title</label>
-            <input type="text" class="form-control" id="inputName5" placeholder="Paper Title">
+            <input type="text" class="form-control" id="inputName5" name="paper_title" placeholder="Paper Title">
         </div>
         <div class="col-md-6">
             <label for="inputState" class="form-label">Select Level</label>
-            <select id="inputState" class="form-select">
+            <select id="inputState" class="form-select" name="level">
                 <option selected disabled>---Please Select---</option>
                 <option>N5</option>
                 <option>N4</option>
@@ -22,7 +29,7 @@
         <div class="col-md-12">
             <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
             <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file"  id="pdfFile" name="pdf_file">
             </div>
         </div>
         <div class="text-center">
@@ -32,5 +39,14 @@
     </form><!-- End Multi Columns Form -->
     </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(".alert").fadeTo(2000, 500).slideUp(500, function(){
+            $(".alert").slideUp(500);
+        });
+    </script>
+
+
 @endsection
 

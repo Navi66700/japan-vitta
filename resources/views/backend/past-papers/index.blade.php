@@ -1,6 +1,13 @@
 @extends('backend.layout.masters')
 @section('title', 'Dashboard')
 @section('content')
+    @if(session()->get('success'))
+        <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
+            <span><b> Success - </b> {{session()->get('success')}}</span>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
     <div class="pagetitle">
         <h1>Data Tables</h1>
         <nav>
@@ -11,7 +18,6 @@
             </ol>
         </nav>
     </div><!-- End Page Title -->
-    @include('sweetalert::alert')
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
@@ -20,7 +26,7 @@
                         <div class="card-header">
                             <h2 class="card-title"> Past Papers</h2>
                             <div class="dt-action-buttons text-right">
-                                <a class="btn btn-primary" href="{{url('add-lessons')}}"> <i class="bi bi-plus"></i>&nbsp </i>Add Past Paper</a>
+                                <a class="btn btn-primary" href="{{url('add-papers')}}"> <i class="bi bi-plus"></i>&nbsp </i>Add Past Paper</a>
                             </div>
                         </div>
                         <!-- Table with stripped rows -->
@@ -36,18 +42,20 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($pastPapers as $key=>$pastPaper)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Brandon Jacob</td>
-                                <td>Designer</td>
-                                <td>28</td>
-                                <td>2016-05-25</td>
+                                <th scope="row">{{$key +1}}</th>
+                                <td>{{$pastPaper->level}}</td>
+                                <td>{{$pastPaper->paper_title}}</td>
+                                <td>{{$pastPaper->created_at}}</td>
+                                <td>{{$pastPaper->updated_at}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-success"><i class="bi bi-pencil"></i></button>
-                                    <a class="btn btn-danger delete-lesson"><i class="bi bi-trash"></i></a>
+                                    <a href="{{url('/edit-papers', $pastPaper->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                    <button class="btn btn-danger delete-paper" value="{{$pastPaper->id}}"><i class="bi bi-trash"></i></button>
                                 </td>
                             </tr>
                             </tbody>
+                            @endforeach
                         </table>
                         <!-- End Table with stripped rows -->
                     </div>
@@ -55,32 +63,39 @@
             </div>
         </div>
     </section>
+{{--    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>--}}
+{{--    <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>--}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
     <script>
         $(document).ready(function() {
 
         });
-        $('body').on('click', '.delete-lesson', function() {
-            var ProductID = $(this).val();
+
+        $('body').on('click', '.delete-paper', function() {
+            var PaperID = $(this).val();
             Swal.fire({
                 title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                text: "You can change this later.",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
+                confirmButtonText: 'Yes, Delete it',
+                customClass: {
+                    confirmButton: 'btn btn-danger',
+                    cancelButton: 'btn btn-outline-danger ml-1'
+                },
+                buttonsStyling: false
+            }).then(function(result) {
+                console.log(result);
+                if (result.value) {
+                    window.location.href = "{{ url('delete-paper') }}/" + PaperID;
                 }
-            })
+            });
         });
+
+
 
         $(".alert").fadeTo(2000, 500).slideUp(500, function(){
             $(".alert").slideUp(500);

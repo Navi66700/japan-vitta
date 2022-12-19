@@ -33,4 +33,8 @@ Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->nam
 
 //Past-Papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
-
+Route::get('add-papers', [PastPaperController::class, 'addPapers'])->name('add-papers');
+Route::post('create-papers', [PastPaperController::class, 'createPapers'])->name('create-papers');
+Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
+Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
+Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
