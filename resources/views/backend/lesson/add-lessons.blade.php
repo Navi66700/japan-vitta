@@ -45,7 +45,7 @@
         </div>
 
         <div class="col-md-6">
-                <label for="inputNumber" class="col-sm-2 col-form-label">Select your Image File</label>
+                <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
                 <div class="col-sm-10">
                     <input class="form-control" type="file" id="image" name="lesson_image" required>
                     <img id="lesson_image" name="lesson_image" class="img-fluid rounded" height="100" width="100" src="#">
