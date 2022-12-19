@@ -29,14 +29,14 @@
             <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
             <div class="col-sm-10">
                 <input class="form-control" id="lesson_image" name="lesson_image" type="file" id="formFile" value="{{$lessons->lesson_image}}">
-                <img id="preview_image" name="lesson_image" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/levels-image/'.$lessons->lesson_image)}}">
+                <img id="preview_image" name="lesson_image" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-image/'.$lessons->lesson_image)}}">
             </div>
         </div>
         <div class="col-md-6">
             <label for="inputNumber" class="col-sm-2 col-form-label">Select PDF File</label>
             <div class="col-sm-10">
                 <input class="form-control" id="lessons_pdf" name="pdf_file" type="file" value="{{$lessons->pdf_file}}">
-                <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/levels-pdf/'.$lessons->pdf_file)}}"></iframe>
+                <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-pdf/'.$lessons->pdf_file)}}"></iframe>
             </div>
         </div>
         <div class="col-12">
