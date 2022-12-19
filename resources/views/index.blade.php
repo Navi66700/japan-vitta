@@ -10,7 +10,7 @@
 
     <div class="video-overlay header-text">
         <div class="caption">
-            <h6>Graduate School of Management</h6>
+            <h6>Go For Your Japan Dream</h6>
             <h2><em>Japan</em> Vitta</h2>
 
         </div>

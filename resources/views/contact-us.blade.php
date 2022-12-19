@@ -49,7 +49,7 @@
             </div>
             <div class="col-md-6">
                 <div id="map">
-                    <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3839835595486!2d79.97605827714575!3d6.599109797508207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2374747e55267%3A0x538d01b64ceaf960!2sKAIGA%20GRAPHIC!5e0!3m2!1sen!2slk!4v1671443230373!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
