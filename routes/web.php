@@ -23,6 +23,10 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+Route::get('/level1', function () {
+    return view('levels.N1.index');
+});
+
 //Lessons
 Route::get('lesson', [LessonController::class, 'index'])->name('lesson');
 Route::get('add-lesson', [LessonController::class, 'addLesson'])->name('add-lesson');
