@@ -16,8 +16,14 @@
                 </div>
             </div>
             <div class="col-md-6">
-
-                <form id="contact" action="" method="post">
+                @if(session()->get('success'))
+                    <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
+                        <span><b> Success - </b> {{session()->get('success')}}</span>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+                <form id="contact" action="{{route('add-contact')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <fieldset>
@@ -31,7 +37,7 @@
                         </div>
                         <div class="col-md-6">
                             <fieldset>
-                                <input name="Telephone" type="text" class="form-control" id="telephone" placeholder="Your Telephone" required="">
+                                <input name="telephone" type="text" class="form-control" id="telephone" placeholder="Your Telephone" required="">
                             </fieldset>
                         </div>
                         <div class="col-md-12">
@@ -55,5 +61,11 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".alert").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert").slideUp(500);
+    });
+</script>
 @endsection
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\PastPaperController;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +24,6 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
-Route::get('/level1', function () {
-    return view('levels.N1.index');
-});
 
 //Lessons
 Route::get('lesson', [LessonController::class, 'index'])->name('lesson');
@@ -34,6 +32,7 @@ Route::post('create-lesson', [LessonController::class, 'createLesson'])->name('c
 Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('edit-lesson');
 Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
 Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
+Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
 
 //Past-Papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
@@ -42,3 +41,6 @@ Route::post('create-papers', [PastPaperController::class, 'createPapers'])->name
 Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
 Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
 Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
+
+//Contact Us
+Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');

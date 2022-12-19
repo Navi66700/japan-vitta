@@ -4,13 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Dashboard - Japan Vitta</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('backend/assets/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('homepage/assets/images/jp-logo.png')}}" rel="icon">
     <link href="{{asset('backend/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -38,7 +37,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="{{asset('backend/assets/img/logo.png')}}" alt="">
+            <img src="{{asset('homepage/assets/images/jp-logo.png')}}" alt="">
             <span class="d-none d-lg-block">Japan Vitta</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>

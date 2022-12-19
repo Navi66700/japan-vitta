@@ -194,7 +194,7 @@
 
                     <center>
                         <h5 class="card-title">N 01</h5>
-                        <button type="button" class="btn btn-warning">View Syllabus</button>
+                        <a href="{{route('view-level-1')}}" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
                 <div class="card-footer">

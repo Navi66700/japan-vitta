@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+    <link rel="icon" href="{{asset('homepage/assets/images/jp-logo.png')}}" type="image/icon type">
     <title>Japan Vitta | @yield('title')</title>
 
     <!-- Bootstrap core CSS -->
@@ -41,6 +41,7 @@
 <!--header-->
 <header class="main-header clearfix" role="header">
     <div class="logo">
+        <img src="{{asset('homepage/assets/images/jp-logo.png')}}" style="width: 80px; height: 70px;" alt="japan vitta">
         <a href="#"><em>JAPAN</em> VITTA</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
@@ -53,7 +54,7 @@
                     <li><a href="#">N 04</a></li>
                     <li><a href="#">N 03</a></li>
                     <li><a href="#">N 02</a></li>
-                    <li><a href="#">N 01</a></li>
+                    <li><a href="{{route('view-level-1')}}">N 01</a></li>
                 </ul>
             </li>
             <li class="has-submenu"><a href="#">Past Papers</a>
@@ -65,19 +66,14 @@
                     <li><a href="#">Level 01</a></li>
                 </ul>
             </li>
-
             <li><a href="#">News</a></li>
-
             <li><a href="{{url('contact-us')}}">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
         </ul>
     </nav>
 </header>
 
-
         @yield('content')
-
-
 
 <footer>
     <div class="container">
@@ -98,7 +94,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('homepage/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('homepage/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
 <script src="{{asset('homepage/assets/js/isotope.min.js')}}"></script>
 <script src="{{asset('homepage/assets/js/owl-carousel.js')}}"></script>
 <script src="{{asset('homepage/assets/js/lightbox.js')}}"></script>
@@ -107,30 +102,15 @@
 <script src="{{asset('homepage/assets/js/slick-slider.js')}}"></script>
 <script src="{{asset('homepage/assets/js/custom.js')}}"></script>
 
-
 <!-- This social media links -->
 <!-- Font Awesome -->
-<link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <!-- Google Fonts -->
-<link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
 <!-- MDB -->
-<link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-    rel="stylesheet"
-/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet"/>
 <!-- MDB -->
-<script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
-></script>
-
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
 </body>
 </html>
 

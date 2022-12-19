@@ -79,4 +79,12 @@ class LessonController extends Controller
         return redirect()->back()->with('success', 'Lesson deleted successfully !!!');
     }
 
+    public function viewLevelOne()
+    {
+        $levelones = lesson::where('level','=','N1')->get();
+        return view('levels/N1/index',[
+            'levelones' => $levelones
+        ]);
+    }
+
 }
