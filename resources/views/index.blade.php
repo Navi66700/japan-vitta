@@ -4,10 +4,15 @@
 <div class="container-fluid">
 <!-- ***** Main Banner Area Start ***** -->
     <div class="row row-cols-1 row-cols-md main-banner">
-    <video autoplay muted loop id="bg-video">
-        <source src="assets/images/course-video.mp4" type="video/mp4" />
-    </video>
-
+{{--    <video autoplay muted loop id="bg-video">--}}
+{{--        <source src="assets/images/course-video.mp4" type="video/mp4" />--}}
+{{--    </video>--}}
+        <div
+            class="bg-image"
+            style="
+    background-image: url('{{asset('homepage/assets/images/japan-b-i.jpeg')}}');
+    height: 100vh;
+  "></div>
     <div class="video-overlay header-text">
         <div class="caption">
             <h6>Go For Your Japan Dream</h6>
