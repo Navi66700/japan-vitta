@@ -44,3 +44,6 @@ Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->na
 
 //Contact Us
 Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
+Route::get('view-contact', [ContactUsController::class, 'viewContact'])->name('view-contact');
+Route::get('delete-contact/{id}', [ContactUsController::class, 'deleteContact'])->name('delete-contact');
+Route::get('edit-contact/{id}', [ContactUsController::class, 'editContact'])->name('edit-contact');

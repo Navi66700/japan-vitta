@@ -20,4 +20,30 @@ class ContactUsController extends Controller
         return redirect()->back()->with('success', 'Your Message Submitted !!!');
     }
 
+    public function viewContact()
+    {
+        $contacts = contactUs::get();
+        return view('backend/contact/index',[
+            'contacts' => $contacts
+        ]);
+
+
+
+    }
+
+    public function deleteContact($id)
+    {
+        $contacts = contactUs::find($id)->delete();
+        return redirect()->back()->with('Success', 'Contact Deleted Successfully !!!');
+    }
+
+
+    public function editContact($id)
+    {
+        $contacts = contactUs::find($id);
+        return view('backend/contact/edit-contact',[
+            'contacts' => $contacts
+        ]);
+    }
+
 }

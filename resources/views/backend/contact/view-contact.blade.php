@@ -13,6 +13,14 @@
             <input type="text" class="form-control" id="inputName5" placeholder="Level">
         </div>
         <div class="col-md-6">
+            <label for="inputName5" class="form-label">Telephone</label>
+            <input type="text" class="form-control" id="inputName5" placeholder="Level">
+        </div>
+        <div class="col-md-12">
+            <label for="inputName5" class="form-label">Description</label>
+            <textarea class="form-control" placeholder="Description" id="description" name="description" style="height: 100px;">{{$lessons->description}}</textarea>
+        </div>
+        <div class="col-md-6">
             <label for="inputName5" class="form-label">Phone</label>
             <input type="text" class="form-control" id="inputName5" placeholder="Level">
         </div>

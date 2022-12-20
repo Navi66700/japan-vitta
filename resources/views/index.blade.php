@@ -125,6 +125,11 @@
 
 
     <div class="row row-cols-1 row-cols-md-5 g-4 courses" data-section="section4">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <h2>All JLPT Levels</h2>
+            </div>
+        </div>
         <div class="col">
             <div class="card h-100">
                 <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
