@@ -87,4 +87,35 @@ class LessonController extends Controller
         ]);
     }
 
+    public function viewLevelTwo()
+    {
+        $leveltwo = lesson::where('level','=','N2')->get();
+        return view('levels/N2/index',[
+            'leveltwo' => $leveltwo
+        ]);
+    }
+
+    public function viewLevelThree()
+    {
+        $levelthree = lesson::where('level','=','N3')->get();
+        return view('levels/N3/index',[
+            'levelthree' => $levelthree
+        ]);
+    }
+
+    public function viewLevelFour()
+    {
+        $levelfour = lesson::where('level','=','N4')->get();
+        return view('levels/N4/index',[
+            'levelfour' => $levelfour
+        ]);
+    }
+
+    public function viewLevelFive()
+    {
+        $levelfive = lesson::where('level','=','N5')->get();
+        return view('levels/N5/index',[
+            'levelfive' => $levelfive
+        ]);
+    }
 }

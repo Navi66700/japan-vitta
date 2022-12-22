@@ -33,6 +33,11 @@ Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('e
 Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
 Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
+Route::get('view-level-2', [LessonController::class, 'viewLevelTwo'])->name('view-level-2');
+Route::get('view-level-3', [LessonController::class, 'viewLevelThree'])->name('view-level-3');
+Route::get('view-level-4', [LessonController::class, 'viewLevelFour'])->name('view-level-4');
+Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('view-level-5');
+
 
 //Past-Papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
