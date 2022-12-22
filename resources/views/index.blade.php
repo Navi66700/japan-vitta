@@ -518,6 +518,9 @@
         <a class="btn btn-primary" style="background-color: #000000;" href="#!" role="button"
         ><i class="fab fa-tiktok"></i
             ></a>
+        <a class="btn btn-primary" style="background-color: #0d6efd;" href="#!" role="button"
+        ><i class="fab fa-telegram"></i
+            ></a>
     </center>
     </div>
     </div>
