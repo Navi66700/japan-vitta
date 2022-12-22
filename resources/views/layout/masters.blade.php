@@ -59,14 +59,14 @@
             </li>
             <li class="has-submenu"><a href="#">Past Papers</a>
                 <ul class="sub-menu">
-                    <li><a href="level04.html">Level 05</a></li>
-                    <li><a href="#">Level 04</a></li>
-                    <li><a href="#">Level 03</a></li>
-                    <li><a href="#">Level 02</a></li>
-                    <li><a href="#">Level 01</a></li>
+                    <li><a href="#">N 05</a></li>
+                    <li><a href="#">N 04</a></li>
+                    <li><a href="#">N 03</a></li>
+                    <li><a href="#">N 02</a></li>
+                    <li><a href="#">N 01</a></li>
                 </ul>
             </li>
-            <li><a href="#">News</a></li>
+{{--            <li><a href="#">News</a></li>--}}
             <li><a href="{{url('contact-us')}}">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
         </ul>
