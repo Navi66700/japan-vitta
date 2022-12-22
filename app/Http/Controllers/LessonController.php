@@ -87,6 +87,7 @@ class LessonController extends Controller
         ]);
     }
 
+
     public function viewLevelTwo()
     {
         $leveltwo = lesson::where('level','=','N2')->get();
@@ -116,6 +117,16 @@ class LessonController extends Controller
         $levelfive = lesson::where('level','=','N5')->get();
         return view('levels/N5/index',[
             'levelfive' => $levelfive
+        ]);
+    }
+
+
+    public function viewLevelOneDetails($id)
+    {
+        $lessononeDetails = lesson::find($id);
+
+        return view('levels/N1/view-level-one',[
+            'lessononeDetails' => $lessononeDetails
         ]);
     }
 }
