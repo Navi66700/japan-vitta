@@ -32,7 +32,10 @@ Route::post('create-lesson', [LessonController::class, 'createLesson'])->name('c
 Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('edit-lesson');
 Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
 Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
+
+//Levels
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
+Route::get('view-level-1-details/{id}', [LessonController::class, 'viewLevelOneDetails'])->name('view-level-1-details');
 Route::get('view-level-2', [LessonController::class, 'viewLevelTwo'])->name('view-level-2');
 Route::get('view-level-3', [LessonController::class, 'viewLevelThree'])->name('view-level-3');
 Route::get('view-level-4', [LessonController::class, 'viewLevelFour'])->name('view-level-4');

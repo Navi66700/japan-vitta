@@ -32,7 +32,7 @@
                             <a href="" class="text-reset">
                                 <h5 class="card-title mb-3">{{$levelone->lesson_title}}</h5>
                             </a>
-                            <button type="button" class="btn btn-success">View Lesson</button>
+                            <a href="{{route('view-level-1-details', $levelone->id)}}" class="btn btn-success">View Lesson</a>
                         </div>
 
                     </div>
