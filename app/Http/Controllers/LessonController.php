@@ -119,7 +119,11 @@ class LessonController extends Controller
         ]);
     }
 
-
-
-
+    public function viewLevelOneDetails($id)
+    {
+        $lessononeDetails = lesson::find($id);
+        return view('levels/N1/view-level-one',[
+            'lessononeDetails' => $lessononeDetails
+        ]);
+    }
 }
