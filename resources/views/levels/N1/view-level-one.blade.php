@@ -16,6 +16,7 @@
                 <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Download Lesson</a></div>
             </div>
         </div>
+        
         <div class="col-md-6">
             <div class="video-caption">
                 <!-- <h4>Learn About Japan</h4> -->
