@@ -37,9 +37,13 @@ Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->nam
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
 Route::get('view-level-1-details/{id}', [LessonController::class, 'viewLevelOneDetails'])->name('view-level-1-details');
 Route::get('view-level-2', [LessonController::class, 'viewLevelTwo'])->name('view-level-2');
+Route::get('view-level-2-details/{id}', [LessonController::class, 'viewLevelTwoDetails'])->name('view-level-2-details');
 Route::get('view-level-3', [LessonController::class, 'viewLevelThree'])->name('view-level-3');
+Route::get('view-level-3-details/{id}', [LessonController::class, 'viewLevelThreeDetails'])->name('view-level-3-details');
 Route::get('view-level-4', [LessonController::class, 'viewLevelFour'])->name('view-level-4');
+Route::get('view-level-4-details/{id}', [LessonController::class, 'viewLevelFourDetails'])->name('view-level-4-details');
 Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('view-level-5');
+Route::get('view-level-5-details/{id}', [LessonController::class, 'viewLevelFiveDetails'])->name('view-level-5-details');
 
 
 //Past-Papers

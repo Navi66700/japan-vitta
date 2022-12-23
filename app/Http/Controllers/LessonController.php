@@ -126,4 +126,38 @@ class LessonController extends Controller
             'lessononeDetails' => $lessononeDetails
         ]);
     }
+
+    public function viewLevelTwoDetails($id)
+    {
+        $lessontwoDetails = lesson::find($id);
+        return view('levels/N2/view-level',[
+            'lessontwoDetails' => $lessontwoDetails
+        ]);
+    }
+
+
+    public function viewLevelThreeDetails($id)
+    {
+        $lessonthreeDetails = lesson::find($id);
+        return view('levels/N3/view-level',[
+            'lessonthreeDetails' => $lessonthreeDetails
+        ]);
+    }
+
+    public function viewLevelFourDetails($id)
+    {
+        $lessonfourDetails = lesson::find($id);
+        return view('levels/N4/view-level',[
+            'lessonfourDetails' => $lessonfourDetails
+        ]);
+    }
+
+    public function viewLevelFiveDetails($id)
+    {
+        $lessonfiveDetails = lesson::find($id);
+        return view('levels/N5/view-level',[
+            'lessonfiveDetails' => $lessonfiveDetails
+        ]);
+    }
+
 }
