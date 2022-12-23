@@ -12,6 +12,7 @@ class pastPaper extends Model
     protected $fillable = [
         'paper_title',
         'level',
-        'pdf_file'
+        'pdf_file',
+        'youtube_link'
     ];
 }

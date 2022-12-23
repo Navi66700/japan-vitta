@@ -31,6 +31,7 @@ class PastPaperController extends Controller
         $pastPaper->paper_title = $request->paper_title;
         $pastPaper->level = $request->level;
         $pastPaper->pdf_file = $request->pdf_file;
+        $pastPaper->youtube_link = $request->youtube_link;
 
 
 

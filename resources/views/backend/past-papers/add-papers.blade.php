@@ -26,12 +26,17 @@
                 <option>N1</option>
             </select>
         </div>
-        <div class="col-md-12">
-            <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
+        <div class="col-md-6">
+            <label for="inputNumber" class="col-sm-2 col-form-label">Select PDF</label>
             <div class="col-sm-10">
                 <input class="form-control" type="file"  id="pdfFile" name="pdf_file">
             </div>
         </div>
+        <div class="col-md-6">
+            <label for="inputName5" class="form-label">Youtube Link</label>
+            <input type="text" class="form-control" id="youtube_link" name="youtube_link" placeholder="Paper Title">
+        </div>
+
         <div class="text-center">
             <button type="submit" class="btn btn-success">Create</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
