@@ -42,7 +42,7 @@
 <header class="main-header clearfix" role="header">
     <div class="logo">
         <img src="{{asset('homepage/assets/images/jp-logo.png')}}" style="width: 80px; height: 70px;" alt="japan vitta">
-        <a href="#"><em>JAPAN</em> VITTA</a>
+        <a href="{{url('/')}}"><em>JAPAN</em> VITTA</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
@@ -59,11 +59,11 @@
             </li>
             <li class="has-submenu"><a href="#">Past Papers</a>
                 <ul class="sub-menu">
-                    <li><a href="#">N 05</a></li>
-                    <li><a href="#">N 04</a></li>
-                    <li><a href="#">N 03</a></li>
-                    <li><a href="#">N 02</a></li>
-                    <li><a href="#">N 01</a></li>
+                    <li><a href="{{route('view-paper-5')}}">N 05</a></li>
+                    <li><a href="{{route('view-paper-4')}}">N 04</a></li>
+                    <li><a href="{{route('view-paper-3')}}">N 03</a></li>
+                    <li><a href="{{route('view-paper-2')}}">N 02</a></li>
+                    <li><a href="{{route('view-paper-1')}}">N 01</a></li>
                 </ul>
             </li>
 {{--            <li><a href="#">News</a></li>--}}
@@ -81,7 +81,7 @@
             <div class="col-md-12">
                 <p><i class="fa fa-copyright"></i> Copyright 2023 Japan Vitta
 
-                    | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a></p>
+                    | Powered By: <a href="#" rel="sponsored" target="_parent">Cervus Technologies</a></p>
 
                 <br><br><br>
             </div>

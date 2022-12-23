@@ -60,9 +60,6 @@ class PastPaperController extends Controller
         ]);
 
 
-
-
-
     }
 
 
@@ -87,4 +84,102 @@ class PastPaperController extends Controller
         $pastPapers = pastPaper::find($id)->delete();
         return redirect()->back()->with('success', 'Paper deleted successfully !!!');
     }
+
+
+    //Load to Past Paper Cards and PAst Papers Profile Pages
+
+    //1.Load to cards
+    public function viewPaperOne()
+    {
+        $viewpapers = pastPaper::where('level','=','N1')->get();
+        return view('papers/N1/index',[
+            'viewpapers' => $viewpapers
+        ]);
+    }
+
+    public function viewPaperTwo()
+    {
+        $viewpapertwo = pastPaper::where('level','=','N2')->get();
+        return view('papers/N2/index',[
+            'viewpapertwo' => $viewpapertwo
+        ]);
+    }
+
+    public function viewPaperThree()
+    {
+        $viewpaperthree = pastPaper::where('level','=','N3')->get();
+        return view('papers/N3/index',[
+            'viewpaperthree' => $viewpaperthree
+        ]);
+    }
+
+    public function viewPaperFour()
+    {
+        $viewpaperfour = pastPaper::where('level','=','N4')->get();
+        return view('papers/N4/index',[
+            'viewpaperfour' => $viewpaperfour
+        ]);
+    }
+
+    public function viewPaperFive()
+    {
+        $viewpaperfive = pastPaper::where('level','=','N5')->get();
+        return view('papers/N5/index',[
+            'viewpaperfive' => $viewpaperfive
+        ]);
+    }
+
+
+
+
+//2.Load to Profile Pages
+    public function viewPaperOneDetails($id)
+    {
+        $paperoneDetails = pastPaper::find($id);
+        return view('papers/N1/view-paper',[
+            'paperoneDetails' => $paperoneDetails
+        ]);
+    }
+
+    public function viewPaperTwoDetails($id)
+    {
+        $papertwoDetails = pastPaper::find($id);
+        return view('papers/N2/view-paper',[
+            'papertwoDetails' => $papertwoDetails
+        ]);
+    }
+    public function viewPaperThreeDetails($id)
+    {
+        $paperthreeDetails = pastPaper::find($id);
+        return view('papers/N3/view-paper',[
+            'paperthreeDetails' => $paperthreeDetails
+        ]);
+    }
+
+    public function viewPaperFourDetails($id)
+    {
+        $paperfourDetails = pastPaper::find($id);
+        return view('papers/N4/view-paper',[
+            'paperfourDetails' => $paperfourDetails
+        ]);
+    }
+
+    public function viewPaperFiveDetails($id)
+    {
+        $paperfiveDetails = pastPaper::find($id);
+        return view('papers/N5/view-paper',[
+            'paperfiveDetails' => $paperfiveDetails
+        ]);
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -46,13 +46,29 @@ Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('vi
 Route::get('view-level-5-details/{id}', [LessonController::class, 'viewLevelFiveDetails'])->name('view-level-5-details');
 
 
-//Past-Papers
+//Past-papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
 Route::get('add-papers', [PastPaperController::class, 'addPapers'])->name('add-papers');
 Route::post('create-papers', [PastPaperController::class, 'createPapers'])->name('create-papers');
 Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
 Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
 Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
+
+//papers
+Route::get('view-paper-1', [PastPaperController::class, 'viewPaperOne'])->name('view-paper-1');
+Route::get('view-paper-1-details/{id}', [PastPaperController::class, 'viewPaperOneDetails'])->name('view-paper-1-details');
+Route::get('view-paper-2', [PastPaperController::class, 'viewPaperTwo'])->name('view-paper-2');
+Route::get('view-paper-2-details/{id}', [PastPaperController::class, 'viewPaperTwoDetails'])->name('view-paper-2-details');
+Route::get('view-paper-3', [PastPaperController::class, 'viewPaperThree'])->name('view-paper-3');
+Route::get('view-paper-3-details/{id}', [PastPaperController::class, 'viewPaperThreeDetails'])->name('view-paper-3-details');
+Route::get('view-paper-4', [PastPaperController::class, 'viewPaperFour'])->name('view-paper-4');
+Route::get('view-paper-4-details/{id}', [PastPaperController::class, 'viewPaperFourDetails'])->name('view-paper-4-details');
+Route::get('view-paper-5', [PastPaperController::class, 'viewPaperFive'])->name('view-paper-5');
+Route::get('view-paper-5-details/{id}', [PastPaperController::class, 'viewPaperFiveDetails'])->name('view-paper-5-details');
+
+
+
+
 
 //Contact Us
 Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
