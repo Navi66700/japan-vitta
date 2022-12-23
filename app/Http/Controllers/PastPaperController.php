@@ -43,12 +43,6 @@ class PastPaperController extends Controller
         $pastPaper->save();
         return redirect()->back()->with('success', 'paper added successfully !!!');
 
-
-
-
-
-
-
 }
 
 //Pass Id to the Edit Page

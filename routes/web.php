@@ -24,7 +24,6 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
-
 //Lessons
 Route::get('lesson', [LessonController::class, 'index'])->name('lesson');
 Route::get('add-lesson', [LessonController::class, 'addLesson'])->name('add-lesson');
@@ -45,6 +44,8 @@ Route::get('view-level-4-details/{id}', [LessonController::class, 'viewLevelFour
 Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('view-level-5');
 Route::get('view-level-5-details/{id}', [LessonController::class, 'viewLevelFiveDetails'])->name('view-level-5-details');
 
+//Download Level PDF
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('pdf-download');
 
 //Past-papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
@@ -65,10 +66,6 @@ Route::get('view-paper-4', [PastPaperController::class, 'viewPaperFour'])->name(
 Route::get('view-paper-4-details/{id}', [PastPaperController::class, 'viewPaperFourDetails'])->name('view-paper-4-details');
 Route::get('view-paper-5', [PastPaperController::class, 'viewPaperFive'])->name('view-paper-5');
 Route::get('view-paper-5-details/{id}', [PastPaperController::class, 'viewPaperFiveDetails'])->name('view-paper-5-details');
-
-
-
-
 
 //Contact Us
 Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\lesson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Stroage;
+
 
 class LessonController extends Controller
 {
@@ -158,6 +160,14 @@ class LessonController extends Controller
         return view('levels/N5/view-level',[
             'lessonfiveDetails' => $lessonfiveDetails
         ]);
+    }
+
+
+    public function pdfDownload($id)
+    {
+        $data = lesson::where('id',$id)->first();
+        $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
     }
 
 }
