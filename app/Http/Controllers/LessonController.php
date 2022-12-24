@@ -170,4 +170,36 @@ class LessonController extends Controller
         return response()->download($file_path);
     }
 
+    public function pdfDownloadTwo($id)
+    {
+        $data = lesson::where('id',$id)->first();
+        $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+    public function pdfDownloadThree($id)
+    {
+        $data = lesson::where('id',$id)->first();
+        $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+    public function pdfDownloadFour($id)
+    {
+        $data = lesson::where('id',$id)->first();
+        $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+
+    public function pdfDownloadFive($id)
+    {
+        $data = lesson::where('id',$id)->first();
+        $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+
+
+
+
 }

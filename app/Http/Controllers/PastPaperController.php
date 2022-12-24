@@ -167,13 +167,41 @@ class PastPaperController extends Controller
     }
 
 
+    public function pdfDownloadPaperOne($id)
+    {
+        $data = pastPaper::where('id',$id)->first();
+        $file_path = public_path("storage/paper-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+    public function pdfDownloadPaperTwo($id)
+    {
+        $data = pastPaper::where('id',$id)->first();
+        $file_path = public_path("storage/paper-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+    public function pdfDownloadPaperThree($id)
+    {
+        $data = pastPaper::where('id',$id)->first();
+        $file_path = public_path("storage/paper-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
+    public function pdfDownloadPaperFour($id)
+    {
+        $data = pastPaper::where('id',$id)->first();
+        $file_path = public_path("storage/paper-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+    public function pdfDownloadPaperFive($id)
+    {
+        $data = pastPaper::where('id',$id)->first();
+        $file_path = public_path("storage/paper-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
 
 
 
 
-
-
-
-
-
-}
+    }

@@ -18,7 +18,7 @@
                 <div class="col-md-6 text-center">
                     <div class="left-content">
                         <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" style="width: 300px; height: 500px;" src="{{asset('storage/paper-pdf/'.$paperfiveDetails->pdf_file)}}"></iframe>
-                        <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Download Paper</a></div>
+                        <div class="main-button"><a rel="nofollow" href="{{url('/pdf-download-paper-5', $paperfiveDetails->id)}}">Download Lesson</a></div>
                     </div>
                 </div>
                 {{--                <div class="col-md-6">--}}

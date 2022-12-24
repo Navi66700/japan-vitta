@@ -46,6 +46,10 @@ Route::get('view-level-5-details/{id}', [LessonController::class, 'viewLevelFive
 
 //Download Level PDF
 Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadTwo'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadThree'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFour'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFive'])->name('pdf-download');
 
 //Past-papers
 Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
@@ -66,6 +70,17 @@ Route::get('view-paper-4', [PastPaperController::class, 'viewPaperFour'])->name(
 Route::get('view-paper-4-details/{id}', [PastPaperController::class, 'viewPaperFourDetails'])->name('view-paper-4-details');
 Route::get('view-paper-5', [PastPaperController::class, 'viewPaperFive'])->name('view-paper-5');
 Route::get('view-paper-5-details/{id}', [PastPaperController::class, 'viewPaperFiveDetails'])->name('view-paper-5-details');
+
+//Download Papers
+Route::get('/pdf-download-paper-1/{id}', [PastPaperController::class, 'pdfDownloadPaperOne'])->name('/pdf-download-paper-1');
+Route::get('/pdf-download-paper-2/{id}', [PastPaperController::class, 'pdfDownloadPaperTwo'])->name('/pdf-download-paper-2');
+Route::get('/pdf-download-paper-3/{id}', [PastPaperController::class, 'pdfDownloadPaperThree'])->name('/pdf-download-paper-3');
+Route::get('/pdf-download-paper-4/{id}', [PastPaperController::class, 'pdfDownloadPaperFour'])->name('/pdf-download-paper-4');
+Route::get('/pdf-download-paper-5/{id}', [PastPaperController::class, 'pdfDownloadPaperFive'])->name('/pdf-download-paper-5');
+
+
+
+
 
 //Contact Us
 Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
