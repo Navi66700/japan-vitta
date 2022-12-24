@@ -8,7 +8,7 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <p style="font-size: 30px; font-weight: bold;">Past Papers - Add Lesson</p>
+    <p style="font-size: 30px; font-weight: bold;">Past Papers - Add Past Paper</p>
     <form class="row g-3" method="post" action="{{route('create-papers')}}"  enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">

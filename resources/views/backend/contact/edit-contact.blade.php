@@ -10,7 +10,7 @@
     @endif
     <!-- Multi Columns Form -->
     <p style="font-size: 30px; font-weight: bold;">Contacts - Edit Contacts</p>
-    <form class="row g-3" method="post" action="" enctype="multipart/form-data">
+    <form class="row g-3" method="post" action="#" enctype="multipart/form-data">
         @csrf
         <input type="hidden" id="contact_id" name="contact_id" value="{{$contacts->id }}">
         <div class="col-md-6">
@@ -33,11 +33,6 @@
         <div class="col-md-12">
             <label for="inputName5" class="form-label">Messsage</label>
             <textarea class="form-control" placeholder="Message" id="description" name="message" style="height: 100px;" readonly>{{$contacts->message}}</textarea>
-        </div>
-
-
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Mark as Read</button>
         </div>
     </form><!-- End Multi Columns Form -->
     </div>

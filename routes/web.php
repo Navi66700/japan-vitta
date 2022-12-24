@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PastPaperController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,13 +26,40 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+Route::get('/sign-in', function () {
+    return view('backend.sign-in');
+});
+
+Route::middleware('adminAuth')->group(function () {
+//Dashboard
+    Route::get('admin-dashboard', [DashboardController::class, 'index'])->name('admin-dashboard');
+
 //Lessons
-Route::get('lesson', [LessonController::class, 'index'])->name('lesson');
-Route::get('add-lesson', [LessonController::class, 'addLesson'])->name('add-lesson');
-Route::post('create-lesson', [LessonController::class, 'createLesson'])->name('create-lesson');
-Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('edit-lesson');
-Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
-Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
+    Route::get('lesson', [LessonController::class, 'index'])->name('lesson');
+    Route::get('add-lesson', [LessonController::class, 'addLesson'])->name('add-lesson');
+    Route::post('create-lesson', [LessonController::class, 'createLesson'])->name('create-lesson');
+    Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('edit-lesson');
+    Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
+    Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
+
+
+//Past-papers
+    Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
+    Route::get('add-papers', [PastPaperController::class, 'addPapers'])->name('add-papers');
+    Route::post('create-papers', [PastPaperController::class, 'createPapers'])->name('create-papers');
+    Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
+    Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
+    Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
+
+
+//Contact Us
+    Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
+    Route::get('view-contact', [ContactUsController::class, 'viewContact'])->name('view-contact');
+    Route::get('delete-contact/{id}', [ContactUsController::class, 'deleteContact'])->name('delete-contact');
+    Route::get('edit-contact/{id}', [ContactUsController::class, 'editContact'])->name('edit-contact');
+    Route::get('update-contact/{id}', [ContactUsController::class, 'updateContact'])->name('update-contact');
+
+});
 
 //Levels
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
@@ -44,21 +73,6 @@ Route::get('view-level-4-details/{id}', [LessonController::class, 'viewLevelFour
 Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('view-level-5');
 Route::get('view-level-5-details/{id}', [LessonController::class, 'viewLevelFiveDetails'])->name('view-level-5-details');
 
-//Download Level PDF
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadTwo'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadThree'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFour'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFive'])->name('pdf-download');
-
-//Past-papers
-Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
-Route::get('add-papers', [PastPaperController::class, 'addPapers'])->name('add-papers');
-Route::post('create-papers', [PastPaperController::class, 'createPapers'])->name('create-papers');
-Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
-Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
-Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
-
 //papers
 Route::get('view-paper-1', [PastPaperController::class, 'viewPaperOne'])->name('view-paper-1');
 Route::get('view-paper-1-details/{id}', [PastPaperController::class, 'viewPaperOneDetails'])->name('view-paper-1-details');
@@ -71,6 +85,13 @@ Route::get('view-paper-4-details/{id}', [PastPaperController::class, 'viewPaperF
 Route::get('view-paper-5', [PastPaperController::class, 'viewPaperFive'])->name('view-paper-5');
 Route::get('view-paper-5-details/{id}', [PastPaperController::class, 'viewPaperFiveDetails'])->name('view-paper-5-details');
 
+//Download Level PDF
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadTwo'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadThree'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFour'])->name('pdf-download');
+Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFive'])->name('pdf-download');
+
 //Download Papers
 Route::get('/pdf-download-paper-1/{id}', [PastPaperController::class, 'pdfDownloadPaperOne'])->name('/pdf-download-paper-1');
 Route::get('/pdf-download-paper-2/{id}', [PastPaperController::class, 'pdfDownloadPaperTwo'])->name('/pdf-download-paper-2');
@@ -78,12 +99,7 @@ Route::get('/pdf-download-paper-3/{id}', [PastPaperController::class, 'pdfDownlo
 Route::get('/pdf-download-paper-4/{id}', [PastPaperController::class, 'pdfDownloadPaperFour'])->name('/pdf-download-paper-4');
 Route::get('/pdf-download-paper-5/{id}', [PastPaperController::class, 'pdfDownloadPaperFive'])->name('/pdf-download-paper-5');
 
+//Login
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');;
 
-
-
-
-//Contact Us
-Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
-Route::get('view-contact', [ContactUsController::class, 'viewContact'])->name('view-contact');
-Route::get('delete-contact/{id}', [ContactUsController::class, 'deleteContact'])->name('delete-contact');
-Route::get('edit-contact/{id}', [ContactUsController::class, 'editContact'])->name('edit-contact');

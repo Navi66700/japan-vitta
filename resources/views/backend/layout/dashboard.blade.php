@@ -28,7 +28,7 @@
                                     <i class="bi bi-book"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>145</h6>
+                                    <h6>{{$lessonCount}}</h6>
 
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                     <i class="bi bi-card-checklist"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>{{$pastPaperCount}}</h6>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <i class="bi bi-envelope"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>1244</h6>
+                                    <h6>{{$messageCount}}</h6>
 
                                 </div>
                             </div>

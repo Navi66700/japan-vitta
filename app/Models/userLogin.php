@@ -12,7 +12,6 @@ class userLogin extends Model
     protected $fillable = [
         'email',
         'password',
-        'description',
         'user_type',
         'name'
     ];

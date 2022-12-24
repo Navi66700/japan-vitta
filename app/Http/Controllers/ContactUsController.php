@@ -46,4 +46,15 @@ class ContactUsController extends Controller
         ]);
     }
 
+    public function updateContact($id)
+    {
+        $contact = contactUs::find($id);
+        $contact->status = 0;
+        $contact->update();
+
+        return redirect()->back()->with('success', 'Contact Read successfully !!!');
+
+
+    }
+
 }

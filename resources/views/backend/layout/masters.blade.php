@@ -57,8 +57,8 @@
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="{{asset('backend/assets/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+{{--                    <img src="{{asset('backend/assets/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">--}}
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Hi {{session()->get('name')}}</span>
                 </a><!-- End Profile Iamge Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <a class="dropdown-item d-flex align-items-center" href="{{route('logout')}}">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>
@@ -87,7 +87,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link {{ 'dashboard-cards' == request()->path() ? 'active' : 'collapsed'}}" href="{{url('dashboard-cards')}}">
+            <a class="nav-link {{ 'admin-dashboard' == request()->path() ? 'active' : 'collapsed'}}" href="{{route('admin-dashboard')}}">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -110,18 +110,19 @@
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed"{{ 'view-contact' == request()->path() ? 'active' : 'collapsed'}}" href="{{route('view-contact')}}">
+            <a class="nav-link {{ 'view-contact' == request()->path() ? 'active' : 'collapsed'}}" href="{{route('view-contact')}}">
                 <i class="bi bi-envelope"></i>
                 <span>Contacts</span>
             </a>
         </li><!-- End Contact Page Nav -->
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-register.html">
-                <i class="bi bi-card-list"></i>
-                <span>News</span>
-            </a>
-        </li><!-- End Register Page Nav -->
+{{--        <li class="nav-item">--}}
+{{--            <a class="nav-link collapsed" href="pages-register.html">--}}
+{{--                <i class="bi bi-card-list"></i>--}}
+{{--                <span>News</span>--}}
+{{--            </a>--}}
+{{--        </li>--}}
+        <!-- End Register Page Nav -->
 
 {{--        <li class="nav-item">--}}
 {{--            <a class="nav-link collapsed" href="pages-login.html">--}}
@@ -152,7 +153,9 @@
 </aside><!-- End Sidebar-->
 
 <main id="main" class="main">
-    @yield('content')
+    @if(session()->has("user_type") == "admin")
+        @yield('content')
+    @endif
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->

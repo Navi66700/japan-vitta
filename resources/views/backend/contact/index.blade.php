@@ -47,8 +47,23 @@
                                     <td>{{$contact->email}}</td>
                                     <td>{{$contact->telephone}}</td>
                                     <td>{{$contact->created_at}}</td>
-                                    <td>{{$contact->status}}</td>
+                                    @if($contact->status == 1)
                                     <td>
+                                        <span class="badge rounded-pill bg-success">Unread</span>
+                                    </td>
+                                    @endif
+                                    @if($contact->status == 0)
+                                        <td>
+                                            <span class="badge rounded-pill bg-warning text-dark">Read</span>
+                                        </td>
+                                    @endif
+                                    <td>
+                                        @if($contact->status == 0)
+                                        <button class="btn btn-success update-contact" value="{{$contact->id}}" disabled><i class="bi bi-check-lg"></i></button>
+                                        @endif
+                                            @if($contact->status == 1)
+                                                <button class="btn btn-success update-contact" value="{{$contact->id}}"><i class="bi bi-check-lg"></i></button>
+                                            @endif
                                         <a href="{{url('/edit-contact', $contact->id)}}" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
                                         <button class="btn btn-danger delete-contact" value="{{$contact->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
@@ -89,6 +104,27 @@
                 console.log(result);
                 if (result.value) {
                     window.location.href = "{{ url('delete-contact') }}/" + ContactID;
+                }
+            });
+        });
+
+        $('body').on('click', '.update-contact', function() {
+            var ContactID = $(this).val();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You can change this later.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Mark as Read it',
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-outline-success ml-1'
+                },
+                buttonsStyling: false
+            }).then(function(result) {
+                console.log(result);
+                if (result.value) {
+                    window.location.href = "{{ url('update-contact') }}/" + ContactID;
                 }
             });
         });
