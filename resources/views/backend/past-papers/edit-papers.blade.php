@@ -29,6 +29,11 @@
                 <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/paper-pdf/'.$pastPapers->pdf_file)}}"></iframe>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <label for="inputName5" class="form-label">Youtube Link</label>
+            <input type="text" class="form-control" id="inputName5" placeholder="Youtube Link" name="youtube_link" value="{{ $pastPapers->youtube_link }}">
+        </div>
 {{--        <div class="col-md-12">--}}
 {{--            <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>--}}
 {{--            <div class="col-sm-10">--}}

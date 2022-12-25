@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md video " data-section="section5">
+        <div class="row row-cols-1 row-cols-md video " data-section="section5" style="background-image: url('{{asset('homepage/assets/images/video-bg.jpg')}}')">
             <input type="hidden" id="paperone_id" name="paper_id" value="{{ $paperfiveDetails->id }}">
             <div class="row">
                 <div class="col-md-12">
