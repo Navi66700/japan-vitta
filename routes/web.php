@@ -7,16 +7,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PastPaperController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('index');
@@ -41,7 +31,6 @@ Route::middleware('adminAuth')->group(function () {
     Route::get('edit-lesson/{id}', [LessonController::class, 'editLesson'])->name('edit-lesson');
     Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
     Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
-
 
 //Past-papers
     Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
