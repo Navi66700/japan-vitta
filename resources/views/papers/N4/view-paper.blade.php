@@ -1,6 +1,6 @@
 
 @extends('layout.masters')
-@section('title', 'Home')
+@section('title', 'N4 Papers')
 @section('content')
 
     <div class="container-fluid">

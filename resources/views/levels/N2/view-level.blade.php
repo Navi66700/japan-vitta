@@ -1,6 +1,6 @@
 @extends('layout.masters')
 @section('title', 'Home')
-@section('content')
+@section('Lessons')
 
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md video " data-section="section5" style="background-image: url('{{asset('homepage/assets/images/video-bg.jpg')}}')">
