@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -34,7 +33,12 @@
             height: 100%;
         }
 
+        a:hover{
+            color: #f5a425;
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -69,6 +73,7 @@
 {{--            <li><a href="#">News</a></li>--}}
             <li><a href="{{url('contact-us')}}">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
+
         </ul>
     </nav>
 </header>
@@ -76,16 +81,50 @@
         @yield('content')
 
 <footer>
+    <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <p><i class="fa fa-copyright"></i> Copyright 2023 Japan Vitta
+            <div class="col-lg-4">
+                <div class="first-item">
 
-                    | Powered By: <a href="#" rel="sponsored" target="_parent">Cervus Technologies</a></p>
+                    <ul>
+                        <div class="logo">
+                            <h4 style="color: white;">Japan Vitta</h4>
+                        </div>
+                        <li><a style="color: lightgray;" href="#">Kalutara South, Western Province, Sri Lanka</a></li>
+                        <li><a style="color: lightgray;" href="#">info@japanvitta.com</a></li>
+                        <li><a style="color: lightgray;" href="#">+94 77 929 78 81</a></li>
+{{--                        <li><a style="color: lightgray;" href="#">+94 76 414 96 30</a></li>--}}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
 
-                <br><br><br>
+                <ul>
+                    <h4 style="color: white;">Useful Links</h4>
+                    <li><a style="color: lightgray;" href="{{url('/')}}">Home</a></li>
+                    <li><a style="color: lightgray;" href="#levels">Levels</a></li>
+                    <li><a style="color: lightgray;" href="{{url('contact-us')}}">Contact Us</a></li>
+                    <li><a style="color: lightgray;" href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+                <ul>
+                        <h4 style="color: white;">Useful Links</h4>
+                    <li><a style="color: lightgray;" href="{{url('/')}}">Terms & Condition</a></li>
+                    <li><a style="color: lightgray;" href="{{url('/')}}">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="under-footer">
+                    <div id="google_translate_element"></div>
+                    <p>Copyright © 2023 Japan Vitta All Rights Reserved.
+                        <br>Powered By: <a href="https://cervustechnologies.com" target="_blank" title="Cervus Technologies">Cervus Technologies</a></p>
+                </div>
             </div>
         </div>
+
     </div>
 
 </footer>
@@ -111,6 +150,14 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet"/>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 

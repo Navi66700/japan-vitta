@@ -32,13 +32,17 @@ class LessonController extends Controller
         $lesson->lesson_image = $request->lesson_image;
         $lesson->youtube_link = $request->youtube_link;
 
+
+
         $request->file('lesson_image')->store('public/lessons-image');
         $request->file('pdf_file')->store('public/lessons-pdf');
 
-        $lesson->pdf_file = $request->file('pdf_file')->hashName();
-        $lesson->lesson_image = $request->file('lesson_image')->hashName();
+        $lesson->pdf_file = $request->file('pdf_file')->getClientOriginalName();
+        $lesson->lesson_image = $request->file('lesson_image')->getClientOriginalName();
+
 
         $lesson->save();
+
         return redirect()->back()->with('success', 'Lesson added successfully !!!');
 
     }

@@ -129,7 +129,7 @@
 
 
 
-    <div class="row row-cols-1 row-cols-md-5 g-4 courses" data-section="section4">
+    <div class="row row-cols-1 row-cols-md-5 g-4 courses" data-section="section4" id="levels">
         <div class="col-md-12">
             <div class="section-heading">
                 <h2>All JLPT Levels</h2>
@@ -143,7 +143,7 @@
 
                     <center>
                         <h5 class="card-title">N 05</h5>
-                        <button type="button" class="btn btn-warning">View Syllabus</button>
+                        <a href="{{route('view-level-5')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
                 <div class="card-footer">
@@ -159,7 +159,7 @@
 
                     <center>
                         <h5 class="card-title">N 04</h5>
-                        <button type="button" class="btn btn-warning">View Syllabus</button>
+                        <a href="{{route('view-level-4')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
                 <div class="card-footer">
@@ -174,7 +174,7 @@
 
                     <center>
                         <h5 class="card-title">N 03</h5>
-                        <button type="button" class="btn btn-warning">View Syllabus</button>
+                        <a href="{{route('view-level-3')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
                 <div class="card-footer">
@@ -189,7 +189,7 @@
 
                     <center>
                         <h5 class="card-title">N 02</h5>
-                        <button type="button" class="btn btn-warning">View Syllabus</button>
+                        <a href="{{route('view-level-2')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
                 <div class="card-footer">
@@ -371,7 +371,7 @@
 {{--        </div>--}}
 {{--    </div>--}}
 
-    <div class="row row-cols-1 row-cols-md video " data-section="section5">
+    <div class="row row-cols-1 row-cols-md video " data-section="section5" style="background-image: url('{{asset('homepage/assets/images/video-bg.jpg')}}')">
         <div class="row">
             <div class="col-md-6 text-center">
                 <div class="left-content">
@@ -459,14 +459,7 @@
     <center>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 align-self-center">
 
-                    <div class="left-content text-center">
-
-                        <h4>Follow Us On <em style="color: deeppink">Social Media</em></h4>
-
-                    </div>
-                </div>
                 <div class="col-md-6">
                     <div class="video-caption">
                         <!-- <h4>Learn About Japan</h4> -->
@@ -479,6 +472,15 @@
         </div>
     </center>
     <center>
+        <div class="col-md-6 align-self-center">
+
+            <div class="left-content text-center">
+
+                <h1 style="text-align: center">Follow Us On <em style="color: #f5a425">Social Media</em></h1>
+
+            </div>
+        </div>
+        <br>
         <!-- Facebook -->
         <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"
         ><i class="fab fa-facebook-f"></i
@@ -524,6 +526,5 @@
     </center>
     </div>
     </div>
-
 @endsection
 
