@@ -30,15 +30,11 @@ class PastPaperController extends Controller
         $pastPaper = new pastPaper();
         $pastPaper->paper_title = $request->paper_title;
         $pastPaper->level = $request->level;
-        $pastPaper->pdf_file = $request->pdf_file;
         $pastPaper->youtube_link = $request->youtube_link;
 
-
-
-        $request->file('pdf_file')->store('public/paper-pdf');
-
-        $pastPaper->pdf_file = $request->file('pdf_file')->hashName();
-
+        $pdf_file = $request->file('pdf_file')->getClientOriginalName();
+        $request->file('pdf_file')->storeAs('public/paper-pdf', $request->pdf_file->getClientOriginalName());
+        $pastPaper->pdf_file = $pdf_file;
 
         $pastPaper->save();
         return redirect()->back()->with('success', 'paper added successfully !!!');

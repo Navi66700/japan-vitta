@@ -30,11 +30,12 @@ class LessonController extends Controller
         $lesson->description = $request->description;
         $lesson->youtube_link = $request->youtube_link;
 
-        $lesson->lesson_image = $request->file('lesson_image')->hashName();
-        $request->file('lesson_image')->store('public/lessons-image');
-        $lesson->pdf_file = $request->file('pdf_file')->hashName();
-        $request->file('pdf_file')->store('public/lessons-pdf');
-
+        $lesson_image = $request->file('lesson_image')->getClientOriginalName();
+        $request->file('lesson_image')->storeAs('public/lessons-image', $request->lesson_image->getClientOriginalName());
+        $pdf_file = $request->file('pdf_file')->getClientOriginalName();
+        $request->file('pdf_file')->storeAs('public/lessons-pdf', $request->pdf_file->getClientOriginalName());
+        $lesson->lesson_image = $lesson_image;
+        $lesson->pdf_file = $pdf_file;
 
         $lesson->save();
 
