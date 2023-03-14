@@ -72,7 +72,7 @@
             </li>
 {{--            <li><a href="#">News</a></li>--}}
             <li><a href="{{url('contact-us')}}">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="{{url('about-us')}}">About Us</a></li>
 
         </ul>
     </nav>
@@ -105,7 +105,7 @@
                     <li><a style="color: lightgray;" href="{{url('/')}}">Home</a></li>
                     <li><a style="color: lightgray;" href="#levels">Levels</a></li>
                     <li><a style="color: lightgray;" href="{{url('contact-us')}}">Contact Us</a></li>
-                    <li><a style="color: lightgray;" href="#">About Us</a></li>
+                    <li><a style="color: lightgray;" href="{{url('about-us')}}">About Us</a></li>
                 </ul>
             </div>
             <div class="col-lg-4">

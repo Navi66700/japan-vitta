@@ -16,6 +16,10 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
 Route::get('/sign-in', function () {
     return view('backend.sign-in');
 });
