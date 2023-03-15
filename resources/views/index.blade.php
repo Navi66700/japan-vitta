@@ -147,7 +147,7 @@
                     </center>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                 </div>
             </div>
         </div>
@@ -163,7 +163,7 @@
                     </center>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Past Papers Also Included</small>
+                    {{-- <small class="text-muted">Past Papers Also Included</small> --}}
                 </div>
             </div>
         </div>      <div class="col">
@@ -178,7 +178,7 @@
                     </center>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                 </div>
             </div>
         </div>      <div class="col">
@@ -193,7 +193,7 @@
                     </center>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                 </div>
             </div>
         </div>      <div class="col">
@@ -208,7 +208,7 @@
                     </center>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    {{-- <small class="text-muted">Last updated 3 mins ago</small> --}}
                 </div>
             </div>
         </div>

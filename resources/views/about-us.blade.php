@@ -8,9 +8,9 @@
         <h1 style="color: aliceblue;">About Us</h1>
 
     </center>
-   
+
 <style>
-     
+
     .sig1 {
   font-family: Snell Roundhand, cursive;
   font-size: 1.8em;
@@ -25,7 +25,7 @@
             </div> -->
             <br><br><br><br><br><br><br><br><br>
             <div class="col-md-6">
-                <p style="font-size:20px; color:white;">
+                <p style="font-size:20px; color:white; text-align: center;">
                 To all of you who are interested in visiting Japan, which has the third largest economy in the world,
                 </p>
 
@@ -46,7 +46,7 @@
                 quality lifestyle. The mission is dedicated to transforming the learning and teaching experience through
                 the development of free online Japanese education facilities.
                 </p>
-                
+
 
                 <p class="sig1" style="font-size:20px; color:white; font-family: ">
                 Vishwa Madushan Gamage (JAPAN VITTA)
