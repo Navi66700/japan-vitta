@@ -25,13 +25,13 @@
             </div> -->
             <br><br><br><br><br><br><br><br><br>
             <div class="col-md-6">
-<<<<<<< HEAD
+
                 <p style="font-size:20px; color:white;line-height: 1.5;text-align: center;  font-family: 'Times New Roman'"; >
                 To all of you who are interested in visiting Japan,
-=======
+
                 <p style="font-size:20px; color:white; text-align: center;">
                 To all of you who are interested in visiting Japan, which has the third largest economy in the world,
->>>>>>> 3b490c81862c2c7d3a5ea8adf650ea8f841598dc
+
                 </p>
 
                 <p style="font-size:20px; color:white;line-height: 1.5;text-align: center; font-family: 'Times New Roman'">
@@ -51,14 +51,12 @@
                 quality lifestyle. The mission is dedicated to transforming the learning and teaching experience through
                 the development of free online Japanese education facilities.
                 </p>
-<<<<<<< HEAD
-=======
 
->>>>>>> 3b490c81862c2c7d3a5ea8adf650ea8f841598dc
+
 
 
                 <p class="sig1" style="font-size:20px; color:white;line-height: 1.5; text-align: center; font-family: ">
-                    Vishwa Madushan Gamage
+                    Vishwa Madushan Gamage <br>
                     (JAPAN VITTA)
                 </p>
             </div>
