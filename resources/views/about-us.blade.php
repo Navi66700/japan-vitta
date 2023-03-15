@@ -8,9 +8,9 @@
         <h1 style="color: aliceblue;">About Us</h1>
 
     </center>
-   
+
 <style>
-     
+
     .sig1 {
   font-family: Snell Roundhand, cursive;
   font-size: 1.8em;
@@ -25,31 +25,32 @@
             </div> -->
             <br><br><br><br><br><br><br><br><br>
             <div class="col-md-6">
-                <p style="font-size:20px; color:white;">
-                To all of you who are interested in visiting Japan, which has the third largest economy in the world,
+                <p style="font-size:20px; color:white;line-height: 1.5;text-align: center;  font-family: 'Times New Roman'"; >
+                To all of you who are interested in visiting Japan,
                 </p>
 
-                <p style="font-size:20px; color:white;">
-                Free self-study Japanese is provided for anyone interested in learning Japanese.
+                <p style="font-size:20px; color:white;line-height: 1.5;text-align: center; font-family: 'Times New Roman'">
+                    which has the third largest economy in the world, Free self-study Japanese is provided for anyone interested in learning Japanese.
                 </p>
 
-                <p style="font-size:20px; color:white;">
+                <p style="font-size:20px; color:white;line-height: 1.5; text-align: center;font-family: 'Times New Roman'";>
                 This website is designed for people coming to Japan for study, work or tourism.
                 Japanese from scratch JLPT / NAT / JLCT / N5 | N4 | N3 | N2 | The Japan Vitta website was created to
                 develop listening skills for the Japanese language through more than 1000 PDFs and videos of the
                 knowledge required for the N1 level.
                 </p>
 
-                <p style="font-size:20px; color:white;">
+                <p style="font-size:20px; color:white; line-height: 1.5; text-align: center;font-family: 'Times New Roman'">
                 The Japan Vitta website aims to develop Japanese language skills. Vision We strive for equitable access
                 to world-class digital learning while building a poverty-free nation with international support and a
                 quality lifestyle. The mission is dedicated to transforming the learning and teaching experience through
                 the development of free online Japanese education facilities.
                 </p>
-                
 
-                <p class="sig1" style="font-size:20px; color:white; font-family: ">
-                Vishwa Madushan Gamage (JAPAN VITTA)
+
+                <p class="sig1" style="font-size:20px; color:white;line-height: 1.5; text-align: center; font-family: ">
+                    Vishwa Madushan Gamage
+                    (JAPAN VITTA)
                 </p>
             </div>
             <div class="col-md-6">
