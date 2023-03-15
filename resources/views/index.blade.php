@@ -137,7 +137,7 @@
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                <img src="{{ asset('homepage/assets/images/n5.jpeg') }}" class="card-img-top"
                      alt="Skyscrapers" />
                 <div class="card-body">
 
@@ -153,7 +153,7 @@
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="{{asset('homepage/assets/images/1.jpg')}}" class="card-img-top"
+                <img src="{{asset('homepage/assets/images/n4.jpeg')}}" class="card-img-top"
                      alt="Skyscrapers" />
                 <div class="card-body">
 
@@ -168,7 +168,7 @@
             </div>
         </div>      <div class="col">
             <div class="card h-100">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                <img src="{{ asset('homepage/assets/images/n3.jpeg') }}" class="card-img-top"
                      alt="Skyscrapers" />
                 <div class="card-body">
 
@@ -183,7 +183,7 @@
             </div>
         </div>      <div class="col">
             <div class="card h-100">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                <img src="{{ asset('homepage/assets/images/n2.jpeg') }}" class="card-img-top"
                      alt="Skyscrapers" />
                 <div class="card-body">
 
@@ -198,7 +198,7 @@
             </div>
         </div>      <div class="col">
             <div class="card h-100">
-                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                <img src="{{ asset('homepage/assets/images/n1.jpeg') }}" class="card-img-top"
                      alt="Skyscrapers" />
                 <div class="card-body">
 
