@@ -109,6 +109,37 @@
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
+
+        <li class="nav-item">
+            <a class="nav-link {{ 'jft' == request()->path() ? 'active' : 'collapsed'}}" href="{{route('jft')}}">
+                <i class="bi bi-card-checklist"></i>
+                <span>JFT</span>
+            </a>
+        </li><!-- End F.A.Q Page Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link {{ 'past-papers' == request()->path() ? 'active' : 'collapsed'}}" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+              <i class="bi bi-menu-button-wide"></i><span>SSW JOBS</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <li>
+                <a href="components-alerts.html">
+                  <i class="bi bi-circle"></i><span>Food</span>
+                </a>
+              </li>
+              <li>
+                <a href="components-accordion.html">
+                  <i class="bi bi-circle"></i><span>Agriculture</span>
+                </a>
+              </li>
+              <li>
+                <a href="components-badges.html">
+                  <i class="bi bi-circle"></i><span>Caregiver</span>
+                </a>
+              </li>
+            </ul>
+          </li><!-- End Components Nav -->
+
         <li class="nav-item">
             <a class="nav-link {{ 'view-contact' == request()->path() ? 'active' : 'collapsed'}}" href="{{route('view-contact')}}">
                 <i class="bi bi-envelope"></i>

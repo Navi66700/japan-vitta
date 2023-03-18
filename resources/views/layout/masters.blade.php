@@ -70,6 +70,12 @@
                     <li><a href="{{route('view-paper-1')}}">N 01</a></li>
                 </ul>
             </li>
+            <li class="has-submenu"><a href="#">SSW</a>
+                <ul class="sub-menu">
+                    <li><a href="{{route('view-jft')}}">JFT</a></li>
+                    <li><a href="{{route('view-paper-4')}}">SSW JOBS</a></li>
+                </ul>
+            </li>
 {{--            <li><a href="#">News</a></li>--}}
             <li><a href="{{url('contact-us')}}">Contact Us</a></li>
             <li><a href="{{url('about-us')}}">About Us</a></li>

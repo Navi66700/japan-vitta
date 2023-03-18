@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PastPaperController;
+use App\Http\Controllers\JftController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,6 +44,11 @@ Route::middleware('adminAuth')->group(function () {
     Route::get('edit-papers/{id}', [PastPaperController::class, 'editPaper'])->name('edit-papers');
     Route::post('update-paper', [PastPaperController::class, 'updatePaper'])->name('update-paper');
     Route::get('delete-paper/{id}', [PastPaperController::class, 'deletePaper'])->name('delete-paper');
+
+// JFT
+    Route::get('jft', [JftController::class, 'index'])->name('jft');
+    Route::get('add-jft', [JftController::class, 'addJft'])->name('add-jft');
+    Route::post('create-jft', [JftController::class, 'createJft'])->name('create-jft');
 
 
 //Contact Us
@@ -92,7 +98,9 @@ Route::get('/pdf-download-paper-3/{id}', [PastPaperController::class, 'pdfDownlo
 Route::get('/pdf-download-paper-4/{id}', [PastPaperController::class, 'pdfDownloadPaperFour'])->name('/pdf-download-paper-4');
 Route::get('/pdf-download-paper-5/{id}', [PastPaperController::class, 'pdfDownloadPaperFive'])->name('/pdf-download-paper-5');
 
+//JFT
+Route::get('view-jft', [JftController::class, 'viewJft'])->name('view-jft');
+
 //Login
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');;
-

@@ -42,7 +42,6 @@
                         </div>
                     </figure>
                 </article>
-
             </div>
         </div>
     </div>
