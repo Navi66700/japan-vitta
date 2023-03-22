@@ -132,7 +132,7 @@
     <div class="row row-cols-1 row-cols-md-5 g-4 courses" data-section="section4" id="levels">
         <div class="col-md-12">
             <div class="section-heading">
-                <h2>All JLPT Levels</h2>
+                <h2>All JLPT / JLCT / NAT Levels</h2>
             </div>
         </div>
         <div class="col">
@@ -404,48 +404,56 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Why choose Grad School?</h2>
+                    <h2>Register For Exams</h2>
                 </div>
             </div>
             <div class="col-md-12">
                 <div id='tabs'>
                     <ul>
-                        <li><a href='#tabs-1'>Best Education</a></li>
-                        <li><a href='#tabs-2'>Top Management</a></li>
-                        <li><a href='#tabs-3'>Quality Meeting</a></li>
+                        <li><a href='#tabs-1'>JLPT</a></li>
+                        <li><a href='#tabs-2'>JLCT</a></li>
+                        <li><a href='#tabs-3'>NAT-TEST</a></li>
                     </ul>
                     <section class='tabs-content'>
                         <article id='tabs-1'>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="{{asset('homepage/assets/images/choose-us-image-01.png')}}" alt="">
+                                    <img src="{{asset('homepage/assets/images/JLPT.jpeg')}}" alt="">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4>Best Education</h4>
-                                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                                    <h4>JLPT Registration</h4>
+                                    <p>The Japanese-Language Proficiency Test (JLPT) has been offered by the Japan Foundation and Japan Educational Exchanges and Services (formerly Association of International Education, Japan) since 1984 as a reliable means of evaluating and certifying the Japanese proficiency of non-native speakers. At the beginning, there were approximately 7,000 examinees worldwide. In 2011, there were as many as 610,000 examinees around the globe, making JLPT the largest-scale Japanese-language test in the world.
+
+                                        The JLPT has five levels: N1, N2, N3, N4 and N5. The easiest level is N5 and the most difficult level is N1.
+
+                                        N4 and N5 measure the level of understanding of basic Japanese mainly learned in class. N1and N2 measure the level of understanding of Japanese used in a broad range of scenes in actual everyday life. N3 is a bridging level between N1/N2 and N4/N5.</p>
+                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
                                 </div>
+
                             </div>
                         </article>
                         <article id='tabs-2'>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="{{asset('homepage/assets/images/choose-us-image-02.png')}}" alt="">
+                                    <img src="{{asset('homepage/assets/images/JLCT.jpeg')}}" alt="">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4>Top Level</h4>
-                                    <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p>
-                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+                                    <h4>JLCT Registration</h4>
+                                    <p>Principally this test is conducted to measure the Japanese language communication skill of a non-native Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. Further JLCT checks Japanese-language communication skill by dividing the test to Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
+{{--                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>--}}
+                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
                                 </div>
                             </div>
                         </article>
                         <article id='tabs-3'>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="{{asset('homepage/assets/images/choose-us-image-03.png')}}" alt="">
+                                    <img src="{{asset('homepage/assets/images/NAT.jpeg')}}" alt="">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4>Quality Meeting</h4>
-                                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                                    <h4>NAT-Test Registration</h4>
+                                    <p>About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers. The tests are separated by difficulty (five levels) and general ability is measured in three categories: Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
+                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
                                 </div>
                             </div>
                         </article>
