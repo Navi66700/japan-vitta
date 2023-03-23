@@ -44,7 +44,6 @@
                     @foreach($jfts as $jft)
                         <div class="col-lg-4 col-md-4 mb-4">
                             <div class="card">
-
                                 <div class="card-body">
                                     <article class="video-item">
                                         <figure>

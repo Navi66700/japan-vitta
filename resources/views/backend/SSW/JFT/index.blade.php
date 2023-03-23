@@ -58,7 +58,7 @@
                                 <td>{{$jft->updated_at}}</td>
                                 <td>
                                     <a href="{{url('/edit-jft', $jft->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
-                                    <button class="btn btn-danger delete-lesson" value="{{$jft->id}}"><i class="bi bi-trash"></i></button>
+                                    <button class="btn btn-danger delete-jft" value="{{$jft->id}}"><i class="bi bi-trash"></i></button>
                                 </td>
                             </tr>
                             </tbody>
@@ -81,8 +81,8 @@
 
         });
 
-        $('body').on('click', '.delete-lesson', function() {
-            var LessonID = $(this).val();
+        $('body').on('click', '.delete-jft', function() {
+            var JftID = $(this).val();
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You can change this later.",
@@ -97,7 +97,7 @@
             }).then(function(result) {
                 console.log(result);
                 if (result.value) {
-                    window.location.href = "{{ url('delete-lesson') }}/" + LessonID;
+                    window.location.href = "{{ url('delete-jft') }}/" + JftID;
                 }
             });
         });

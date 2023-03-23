@@ -51,6 +51,7 @@ Route::middleware('adminAuth')->group(function () {
     Route::post('create-jft', [JftController::class, 'createJft'])->name('create-jft');
     Route::get('edit-jft/{id}',[JftController::class, 'editJft'])->name('edit-jft');
     Route::post('update-jft',[JftController::class, 'updateJft'])->name('update-jft');
+    Route::get('delete-jft/{id}', [JftController::class, 'deleteJft'])->name('delete-jft');
 
 
 //Contact Us

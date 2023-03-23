@@ -59,7 +59,6 @@ class JftController extends Controller
         return $file->getClientOriginalName();
       }
 
-
     public function updateJft(Request $request)
     {
         $jft = JFT::find($request->jft_id);
@@ -80,5 +79,10 @@ class JftController extends Controller
         return response()->download($file_path);
     }
 
+    public function deleteJft($id)
+    {
+        $jfts = Jft::find($id)->delete();
+        return redirect()->back()->with('success', 'JFT deleted successfully !!!');
+    }
 
 }
