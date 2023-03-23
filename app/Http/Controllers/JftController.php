@@ -36,7 +36,10 @@ class JftController extends Controller
 
     public function viewJft()
     {
-        return view('SSW/JFT/index');
+        $jfts = Jft::get();
+        return view('SSW/JFT/index',[
+            'jfts' => $jfts
+        ]);
     }
 
     public function editJft($id)
@@ -68,6 +71,13 @@ class JftController extends Controller
           }
          $jft->update();
          return redirect()->back()->with('success', 'JFT Updated Successfully');
+    }
+
+    public function jftPdfDownload($id)
+    {
+        $data = Jft::where('id',$id)->first();
+        $file_path = public_path("storage/jft-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
     }
 
 
