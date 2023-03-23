@@ -57,7 +57,7 @@
                                 <td>{{$jft->created_at}}</td>
                                 <td>{{$jft->updated_at}}</td>
                                 <td>
-                                    <a href="{{url('/edit-lesson', $jft->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                    <a href="{{url('/edit-jft', $jft->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                     <button class="btn btn-danger delete-lesson" value="{{$jft->id}}"><i class="bi bi-trash"></i></button>
                                 </td>
                             </tr>
