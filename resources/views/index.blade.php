@@ -375,11 +375,11 @@
         <div class="row">
             <div class="col-md-6 text-center">
                 <div class="left-content">
-                    <span>our presentation is for you</span>
+{{--                    <span>our presentation is for you</span>--}}
                     <h4>Learn Everything About <em>Japan</em></h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
-                        <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
-                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
+                    <p> Japan is an island nation located in East Asia, with Tokyo as its capital city. It is known for its rich cultural heritage, advanced technology, delicious cuisine, and beautiful landmarks. With a population of over 125 million people, Japan is one of the most populous countries in the world. The Japanese society is also renowned for its emphasis on discipline, politeness, and respect for others.
+                        <br><br>Despite being a modern and developed country, Japan has managed to preserve its traditional culture and practices, making it a unique and fascinating destination for visitors from around the world.</p>
+                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="blank">Learn More</a></div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -490,45 +490,45 @@
         </div>
         <br>
         <!-- Facebook -->
-        <a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #3b5998;" target="_blank" href=" https://www.facebook.com/JAPANVITTA?mibextid=ZbWKwL" role="button"
         ><i class="fab fa-facebook-f"></i
             ></a>
 
         <!-- Twitter -->
-        <a class="btn btn-primary" style="background-color: #55acee;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #55acee;" href="" role="button" target="_blank"
         ><i class="fab fa-twitter"></i
             ></a>
 
 
 
         <!-- Instagram -->
-        <a class="btn btn-primary" style="background-color: #8a3ab9;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #8a3ab9;" href="https://instagram.com/japan_vitta?igshid=ZDdkNTZiNTM=" target="_blank" role="button"
         ><i class="fab fa-instagram"></i
             ></a>
 
         <!-- Linkedin -->
-        <a class="btn btn-primary" style="background-color: #0082ca;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank"  href="" role="button"
         ><i class="fab fa-linkedin-in"></i
             ></a>
 
 
 
         <!-- Youtube -->
-        <a class="btn btn-primary" style="background-color: #ed302f;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #ed302f;" href="https://youtube.com/@japan_vitta" target="_blank"  role="button"
         ><i class="fab fa-youtube"></i
             ></a>
 
 
 
         <!-- Whatsapp -->
-        <a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #25d366;" href="https://wa.me/message/SVYLTH2337TNI1" target="_blank" role="button"
         ><i class="fab fa-whatsapp"></i
             ></a>
 
-        <a class="btn btn-primary" style="background-color: #000000;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #000000;" href="https://t.me/japanvitta" target="_blank"  role="button"
         ><i class="fab fa-tiktok"></i
             ></a>
-        <a class="btn btn-primary" style="background-color: #0d6efd;" href="#!" role="button"
+        <a class="btn btn-primary" style="background-color: #0d6efd;" href="https://www.tiktok.com/@japan_vitta" target="_blank"  role="button"
         ><i class="fab fa-telegram"></i
             ></a>
     </center>
