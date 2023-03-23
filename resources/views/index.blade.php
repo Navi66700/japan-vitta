@@ -427,7 +427,7 @@
                                         The JLPT has five levels: N1, N2, N3, N4 and N5. The easiest level is N5 and the most difficult level is N1.
 
                                         N4 and N5 measure the level of understanding of basic Japanese mainly learned in class. N1and N2 measure the level of understanding of Japanese used in a broad range of scenes in actual everyday life. N3 is a bridging level between N1/N2 and N4/N5.</p>
-                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
+                                    <div class="main-button"><a rel="nofollow" href="https://www.jlpt.jp/e/" target="blank">Register Now</a></div>
                                 </div>
 
                             </div>
@@ -441,7 +441,7 @@
                                     <h4>JLCT Registration</h4>
                                     <p>Principally this test is conducted to measure the Japanese language communication skill of a non-native Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. Further JLCT checks Japanese-language communication skill by dividing the test to Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
 {{--                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>--}}
-                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
+                                    <div class="main-button"><a rel="nofollow" href="http://jlctsrilanka.lk/application/submit.php" target="blank">Register Now</a></div>
                                 </div>
                             </div>
                         </article>
@@ -453,7 +453,7 @@
                                 <div class="col-md-6">
                                     <h4>NAT-Test Registration</h4>
                                     <p>About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers. The tests are separated by difficulty (five levels) and general ability is measured in three categories: Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
-                                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">Register Now</a></div>
+                                    <div class="main-button"><a rel="nofollow" href="https://colombo.nat-test.jp" target="blank">Register Now</a></div>
                                 </div>
                             </div>
                         </article>
