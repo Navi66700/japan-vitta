@@ -6,6 +6,10 @@ use App\Http\Controllers\LessonController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PastPaperController;
 use App\Http\Controllers\JftController;
+use App\Http\Controllers\FoodController;
+use App\Http\Controllers\AgricultureController;
+use App\Http\Controllers\CaregiverController;
+use App\Models\Agriculture;
 use Illuminate\Support\Facades\Route;
 
 
@@ -52,6 +56,29 @@ Route::middleware('adminAuth')->group(function () {
     Route::get('edit-jft/{id}',[JftController::class, 'editJft'])->name('edit-jft');
     Route::post('update-jft',[JftController::class, 'updateJft'])->name('update-jft');
     Route::get('delete-jft/{id}', [JftController::class, 'deleteJft'])->name('delete-jft');
+
+    Route::get('add-jft-video', [JftController::class, 'addJftVideo'])->name('add-jft-video');
+    Route::post('createJftVideo',[JftController::class, 'createJftVideo'])->name('createJftVideo');
+    Route::get('update-jft-video/{id}',[JftController::class, 'updateJftVideo'])->name('update-jft-video');
+    Route::post('edit-jft-video',[JftController::class, 'editJftVideo'])->name('edit-jft-video');
+    Route::get('delete-jft-video/{id}',[JftController::class, 'deleteJftVideo'])->name('delete-jft-video');
+
+// Foods
+    Route::get('foods',[FoodController::class, 'index'])->name('foods');
+    Route::get('add-food',[FoodController::class, 'addFood'])->name('add-food');
+    Route::get('add-food-video',[FoodController::class, 'addFoodVideo'])->name('add-food-video');
+
+
+//Agriculture
+    Route::get('agri',[AgricultureController::class, 'index'])->name('agri');
+    Route::get('add-agri',[AgricultureController::class, 'addAgri'])->name('add-agri');
+    Route::get('add-agri-video',[AgricultureController::class, 'addAgriVideo'])->name('add-agri-video');
+
+//Caregiver
+    Route::get('caregiver',[CaregiverController::class, 'index'])->name('caregiver');
+    Route::get('add-caregiver',[CaregiverController::class, 'addCaregiver'])->name('add-caregiver');
+    Route::get('add-caregiver-video',[CaregiverController::class, 'addCaregiverVideo'])->name('add-caregiver-video');
+
 
 
 //Contact Us

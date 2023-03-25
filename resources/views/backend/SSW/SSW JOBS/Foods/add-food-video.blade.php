@@ -1,5 +1,5 @@
 @extends('backend.layout.masters')
-@section('title', 'Add JFT')
+@section('title', 'Add Food Video')
 @section('content')
     @if(session()->get('success'))
         <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
@@ -7,18 +7,17 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <p style="font-size: 30px; font-weight: bold;">JFT - Add JFT</p>
-    <form class="row g-3" method="post" action="{{route('create-jft')}}"  enctype="multipart/form-data">
+    <p style="font-size: 30px; font-weight: bold;">Food - Add Food Video</p>
+    <form class="row g-3" method="post" action="#"  enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">
-            <label for="inputName5" class="form-label">JFT Title</label>
-            <input type="text" class="form-control" id="inputName5" name="pdf_name" placeholder="JFT Title" required>
+            <label for="inputName5" class="form-label">Food Video Link</label>
+            <input type="text" class="form-control" id="inputName5" name="food_title" placeholder="Food Video Link" required>
         </div>
         <div class="col-md-6">
-            <label for="inputNumber" class="form-label">Select PDF</label>
-            <input class="form-control" type="file"  id="pdfFile" name="pdf_file" required>
+            <label for="inputNumber" class="form-label">Food Video Name</label>
+            <input class="form-control" type="text"  id="food_video_name" name="food_video_name" placeholder="Food Video Name" required>
         </div>
-
         <div class="text-center">
             <button type="submit" class="btn btn-success">Create</button>
             <button type="reset" class="btn btn-secondary">Reset</button>

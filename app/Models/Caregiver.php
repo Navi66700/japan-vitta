@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jft extends Model
+class Caregiver extends Model
 {
     use HasFactory;
-    protected $table = 'jft_tb';
+    protected $table = 'caregiver';
     protected $fillable = [
-        'pdf_name',
+        'caregiver_title',
         'pdf_file',
     ];
 }

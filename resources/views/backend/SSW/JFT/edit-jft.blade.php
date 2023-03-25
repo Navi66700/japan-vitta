@@ -30,11 +30,6 @@
                 @endif
             </div>
         </div>
-        <div class="col-md-6">
-            <label for="inputName5" class="form-label">Youtube Link</label>
-            <input type="text" class="form-control" id="video_link" name="video_link" placeholder="Paper Title" value={{$jfts->video_link}}>
-        </div>
-
         <div class="text-center">
             <button type="submit" class="btn btn-success">Update</button>
             <button type="reset" class="btn btn-secondary">Reset</button>

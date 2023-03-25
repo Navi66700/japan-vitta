@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jft extends Model
+class JftVideo extends Model
 {
     use HasFactory;
-    protected $table = 'jft_tb';
+    protected $table = 'jft_video';
     protected $fillable = [
-        'pdf_name',
-        'pdf_file',
+        'jft_video_link',
+        'jft_video_name',
     ];
 }
