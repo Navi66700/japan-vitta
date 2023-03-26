@@ -89,7 +89,7 @@ class AgricultureController extends Controller
         $agriculture_video-> agri_video_name = $request->agri_video_name;
         $agriculture_video->save();
 
-        return redirect()->back()->with('success', 'Food Video Added successfully !!!');
+        return redirect()->back()->with('success', 'Agriculture Video Added successfully !!!');
 
     }
     public function updateAgricultureVideo($id)
@@ -106,7 +106,7 @@ class AgricultureController extends Controller
         $agriculture_videos->agri_video_link = $request->agri_video_link;
         $agriculture_videos->agri_video_name = $request->agri_video_name;
         $agriculture_videos->update();
-        return redirect()->back()->with('success', 'Food Video Updated Successfully');
+        return redirect()->back()->with('success', 'Agriculture Video Updated Successfully');
     }
 
     public function deleteAgricultureVideo($id)

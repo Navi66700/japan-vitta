@@ -1,5 +1,5 @@
 @extends('backend.layout.masters')
-@section('title', 'Edit JFT Video')
+@section('title', 'Edit Agriculture Video')
 @section('content')
     @if(session()->get('success'))
         <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">

@@ -1,5 +1,5 @@
 @extends('backend.layout.masters')
-@section('title', 'Add Food')
+@section('title', 'Edit Agriculture')
 @section('content')
     @if(session()->get('success'))
         <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
