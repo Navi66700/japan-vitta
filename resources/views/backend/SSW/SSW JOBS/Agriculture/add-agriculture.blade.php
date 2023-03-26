@@ -8,7 +8,7 @@
         </div>
     @endif
     <p style="font-size: 30px; font-weight: bold;">Agriculture - Add Agriculture</p>
-    <form class="row g-3" method="post" action="#"  enctype="multipart/form-data">
+    <form class="row g-3" method="post" action="{{('create-agriculture')}}"  enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Agriculture Title</label>

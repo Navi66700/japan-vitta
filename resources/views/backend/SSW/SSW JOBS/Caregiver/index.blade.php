@@ -71,7 +71,7 @@
                                     <td>{{$caregiver->created_at}}</td>
                                     <td>{{$caregiver->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-caregiver', $caregiver->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <a href="{{url('/update-caregiver', $caregiver->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                         <button class="btn btn-danger delete-caregiver" value="{{$caregiver->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -109,12 +109,12 @@
                                     {{-- <td>
                                         <img src="{{asset('storage/lessons-image/'.$lesson->lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
                                     </td> --}}
-                                    <td>{{$caregiver_video->agri_video_link}}</td>
-                                    <td>{{$caregiver_video->agri_video_name}}</td>
+                                    <td>{{$caregiver_video->caregiver_video_link}}</td>
+                                    <td>{{$caregiver_video->caregiver_video_name}}</td>
                                     <td>{{$caregiver_video->created_at}}</td>
                                     <td>{{$caregiver_video->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-caregiver-video', $caregiver_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <a href="{{url('/update-caregiver-video', $caregiver_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                         <button class="btn btn-danger delete-caregiver-video" value="{{$caregiver_video->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -141,8 +141,8 @@
 
         });
 
-        $('body').on('click', '.delete-jft', function() {
-            var JftID = $(this).val();
+        $('body').on('click', '.delete-caregiver', function() {
+            var CaregiverID = $(this).val();
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You can change this later.",
@@ -157,11 +157,31 @@
             }).then(function(result) {
                 console.log(result);
                 if (result.value) {
-                    window.location.href = "{{ url('delete-jft') }}/" + JftID;
+                    window.location.href = "{{ url('delete-caregiver') }}/" + CaregiverID;
                 }
             });
         });
 
+        $('body').on('click', '.delete-caregiver-video', function() {
+            var CaregiverVideoID = $(this).val();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You can change this later.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Delete it',
+                customClass: {
+                    confirmButton: 'btn btn-danger',
+                    cancelButton: 'btn btn-outline-danger ml-1'
+                },
+                buttonsStyling: false
+            }).then(function(result) {
+                console.log(result);
+                if (result.value) {
+                    window.location.href = "{{ url('delete-caregiver-video') }}/" + CaregiverVideoID;
+                }
+            });
+        });
 
         // $('body').on('click', '.delete-lesson', function() {
         //     var LessonID = $(this).val();

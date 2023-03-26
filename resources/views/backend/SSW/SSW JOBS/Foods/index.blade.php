@@ -71,7 +71,7 @@
                                     <td>{{$food->created_at}}</td>
                                     <td>{{$food->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-food', $food->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <a href="{{url('/update-food', $food->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                         <button class="btn btn-danger delete-food" value="{{$food->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -114,7 +114,7 @@
                                     <td>{{$food_video->created_at}}</td>
                                     <td>{{$food_video->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-food-video', $food_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <a href="{{url('/update-food-video', $food_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                         <button class="btn btn-danger delete-food-video" value="{{$food_video->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -141,8 +141,8 @@
 
         });
 
-        $('body').on('click', '.delete-jft', function() {
-            var JftID = $(this).val();
+        $('body').on('click', '.delete-food', function() {
+            var FoodID = $(this).val();
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You can change this later.",
@@ -157,11 +157,30 @@
             }).then(function(result) {
                 console.log(result);
                 if (result.value) {
-                    window.location.href = "{{ url('delete-jft') }}/" + JftID;
+                    window.location.href = "{{ url('delete-food') }}/" + FoodID;
                 }
             });
         });
-
+        $('body').on('click', '.delete-food-video', function() {
+            var FoodID = $(this).val();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You can change this later.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Delete it',
+                customClass: {
+                    confirmButton: 'btn btn-danger',
+                    cancelButton: 'btn btn-outline-danger ml-1'
+                },
+                buttonsStyling: false
+            }).then(function(result) {
+                console.log(result);
+                if (result.value) {
+                    window.location.href = "{{ url('delete-food-video') }}/" + FoodID;
+                }
+            });
+        });
 
         // $('body').on('click', '.delete-lesson', function() {
         //     var LessonID = $(this).val();
