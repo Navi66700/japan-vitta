@@ -19,6 +19,15 @@
             <label for="inputName5" class="form-label">Lesson Video Link</label>
             <input type="text" class="form-control" id="video_link" name="video_link" placeholder="Lesson Video Link" required>
         </div>
+        <div class="col-md-6">
+            <label for="inputState" class="form-label">Select Level</label>
+            <select id="inputState" class="form-select" name="level" required>
+                <option selected disabled value="">---Please Select---</option>
+                <option>N3</option>
+                <option>N2</option>
+                <option>N1</option>
+            </select>
+        </div>
         <div class="text-center">
             <button type="submit" class="btn btn-success">Create</button>
             <button type="reset" class="btn btn-secondary">Reset</button>

@@ -20,6 +20,10 @@
             <label for="inputName5" class="form-label">Lesson Video Link</label>
             <input type="text" class="form-control" id="video_link" name="video_link" value="{{$lessons_video_n3_n2_n1->video_link}}" placeholder="Lesson Video Link" required>
         </div>
+        <div class="col-md-6">
+            <label for="inputName5" class="form-label">Level</label>
+            <input type="text" class="form-control" id="level" name="level" value="{{$lessons_video_n3_n2_n1->level}}" placeholder="Level" readonly>
+        </div>
         <div class="text-center">
             <button type="submit" class="btn btn-success">Update</button>
             <button type="reset" class="btn btn-secondary">Reset</button>

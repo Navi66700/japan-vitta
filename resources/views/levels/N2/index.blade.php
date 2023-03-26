@@ -1,5 +1,5 @@
 @extends('layout.masters')
-@section('title', 'Contact Us')
+@section('title', 'Level 02')
 @section('content')
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
@@ -15,7 +15,7 @@
         </center>
         <div class="text-center container py-5">
             <div class="row">
-                @foreach($leveltwo as $leveltwo)
+                @foreach($leveltwos as $leveltwo)
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="card">
                             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
@@ -32,12 +32,36 @@
                                 <a href="" class="text-reset">
                                     <h5 class="card-title mb-3">{{$leveltwo->lesson_title}}</h5>
                                 </a>
-                                <a type="button" class="btn btn-success" href="{{route('view-level-2-details', $leveltwo->id)}}" >View Lesson</a>
+                                <a rel="nofollow" class="btn btn-warning" href="{{url('/level-2-pdf-download', $leveltwo->id)}}">Download Lesson</a>
                             </div>
-
                         </div>
                     </div>
                 @endforeach
+                </div>
+            </div>
+            <div class="text-center container py-5">
+                <div class="row">
+                    @foreach($leveltwoVideos as $leveltwoVideo)
+                        <div class="col-lg-4 col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <article class="video-item">
+                                        <figure>
+                                            <div class="video-container">
+                                                <iframe
+                                                    src="{{$leveltwoVideo->video_link}}"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
             </div>
         </div>
     </div>
