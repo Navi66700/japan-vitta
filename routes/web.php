@@ -33,6 +33,22 @@ Route::get('/ssw-jobs', function () {
     return view('SSW.SSW JOBS.index');
 });
 
+Route::get('/agriculture', function () {
+    return view('SSW.SSW JOBS.Agriculture.index');
+});
+
+Route::get('/food', function () {
+    return view('SSW.SSW JOBS.Food.index');
+});
+Route::get('/caregiver1', function () {
+    return view('SSW.SSW JOBS.Caregiver.index');
+});
+
+
+
+
+
+
 Route::middleware('adminAuth')->group(function () {
 //Dashboard
     Route::get('admin-dashboard', [DashboardController::class, 'index'])->name('admin-dashboard');
