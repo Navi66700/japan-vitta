@@ -142,11 +142,10 @@ Route::middleware('adminAuth')->group(function () {
 
 //Levels
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
-Route::get('view-level-1-details/{id}', [LessonController::class, 'viewLevelOneDetails'])->name('view-level-1-details');
 Route::get('view-level-2', [LessonController::class, 'viewLevelTwo'])->name('view-level-2');
-Route::get('view-level-2-details/{id}', [LessonController::class, 'viewLevelTwoDetails'])->name('view-level-2-details');
 Route::get('view-level-3', [LessonController::class, 'viewLevelThree'])->name('view-level-3');
-Route::get('view-level-3-details/{id}', [LessonController::class, 'viewLevelThreeDetails'])->name('view-level-3-details');
+
+
 Route::get('view-level-4', [LessonController::class, 'viewLevelFour'])->name('view-level-4');
 Route::get('view-level-4-details/{id}', [LessonController::class, 'viewLevelFourDetails'])->name('view-level-4-details');
 Route::get('view-level-5', [LessonController::class, 'viewLevelFive'])->name('view-level-5');
@@ -165,9 +164,9 @@ Route::get('view-paper-5', [PastPaperController::class, 'viewPaperFive'])->name(
 Route::get('view-paper-5-details/{id}', [PastPaperController::class, 'viewPaperFiveDetails'])->name('view-paper-5-details');
 
 //Download Level PDF
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadTwo'])->name('pdf-download');
-Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadThree'])->name('pdf-download');
+Route::get('level-1-pdf-download/{id}', [LessonController::class, 'pdfDownload'])->name('level-1-pdf-download');
+Route::get('level-2-pdf-download/{id}', [LessonController::class, 'pdfDownloadTwo'])->name('level-2-pdf-download');
+Route::get('level-3-pdf-download/{id}', [LessonController::class, 'pdfDownloadThree'])->name('level-3-pdf-download');
 Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFour'])->name('pdf-download');
 Route::get('pdf-download/{id}', [LessonController::class, 'pdfDownloadFive'])->name('pdf-download');
 

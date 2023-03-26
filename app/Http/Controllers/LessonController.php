@@ -112,7 +112,7 @@ class LessonController extends Controller
 
     }
 
-    
+
     public function uploadLessonImage(Request $request) {
         $file = $request->file('lesson_image');
         $destinationPath = 'storage/lessons-image';
@@ -166,6 +166,7 @@ class LessonController extends Controller
         $lessons_video_n1_n2_n3 = new LessonN1N2N3Videos();
         $lessons_video_n1_n2_n3->video_title = $request->video_title;
         $lessons_video_n1_n2_n3->video_link = $request->video_link;
+        $lessons_video_n1_n2_n3->level = $request->level;
 
         $lessons_video_n1_n2_n3->save();
         return redirect()->back()->with('success', 'Lesson Video added successfully !!!');
@@ -197,27 +198,34 @@ class LessonController extends Controller
 
     public function viewLevelOne()
     {
-        $levelones = lesson::where('level','=','N1')->get();
+        $levelones = LessonN3N2N1::where('level','=','N1')->get();
+        $leveloneVideos = LessonN1N2N3Videos::where('level','=','N1')->get();
         return view('levels/N1/index',[
-            'levelones' => $levelones
+            'levelones' => $levelones,
+            'leveloneVideos' => $leveloneVideos
         ]);
     }
 
     public function viewLevelTwo()
     {
-        $leveltwo = lesson::where('level','=','N2')->get();
+        $leveltwos = LessonN3N2N1::where('level','=','N2')->get();
+        $leveltwoVideos = LessonN1N2N3Videos::where('level','=','N2')->get();
         return view('levels/N2/index',[
-            'leveltwo' => $leveltwo
+            'leveltwos' => $leveltwos,
+            'leveltwoVideos' => $leveltwoVideos
         ]);
     }
 
     public function viewLevelThree()
     {
-        $levelthree = lesson::where('level','=','N3')->get();
+        $levelthrees = LessonN3N2N1::where('level','=','N3')->get();
+        $levelthreeVideos = LessonN1N2N3Videos::where('level','=','N3')->get();
         return view('levels/N3/index',[
-            'levelthree' => $levelthree
+            'levelthrees' => $levelthrees,
+            'levelthreeVideos' => $levelthreeVideos
         ]);
     }
+
 
     public function viewLevelFour()
     {
@@ -279,24 +287,25 @@ class LessonController extends Controller
 
     public function pdfDownload($id)
     {
-        $data = lesson::where('id',$id)->first();
+        $data = LessonN3N2N1::where('id',$id)->first();
         $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
         return response()->download($file_path);
     }
 
     public function pdfDownloadTwo($id)
     {
-        $data = lesson::where('id',$id)->first();
+        $data = LessonN3N2N1::where('id',$id)->first();
         $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
         return response()->download($file_path);
     }
 
     public function pdfDownloadThree($id)
     {
-        $data = lesson::where('id',$id)->first();
+        $data = LessonN3N2N1::where('id',$id)->first();
         $file_path = public_path("storage/lessons-pdf/{$data->pdf_file}");
         return response()->download($file_path);
     }
+
     public function pdfDownloadFour($id)
     {
         $data = lesson::where('id',$id)->first();

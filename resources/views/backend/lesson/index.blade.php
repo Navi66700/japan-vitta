@@ -166,6 +166,7 @@
                                 <th scope="row">{{$key +1}}</th>
                                 <td>{{$lesson_video_n1_n2_n3->video_title}}</td>
                                 <td>{{$lesson_video_n1_n2_n3->video_link}}</td>
+                                <td>{{$lesson_video_n1_n2_n3->level}}</td>
                                 <td>{{$lesson_video_n1_n2_n3->created_at}}</td>
                                 <td>{{$lesson_video_n1_n2_n3->updated_at}}</td>
                                 <td>
@@ -222,7 +223,7 @@
             });
         });
 
-        
+
         $('body').on('click', '.delete-lesson-n3-n2-n1', function() {
             var LessonID = $(this).val();
             Swal.fire({
