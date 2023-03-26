@@ -155,6 +155,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Video Title</th>
                                 <th scope="col">Video Link</th>
+                                <th scope="col">Level</th>
                                 <th scope="col">Created At</th>
                                 <th scope="col">Updated At</th>
                                 <th scope="col">Action</th>
