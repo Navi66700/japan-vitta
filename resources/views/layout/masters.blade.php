@@ -73,7 +73,7 @@
             <li class="has-submenu"><a href="#">SSW</a>
                 <ul class="sub-menu">
                     <li><a href="{{route('view-jft')}}">JFT</a></li>
-                    <li><a href="{{route('view-paper-4')}}">SSW JOBS</a></li>
+                    <li><a href="{{url('ssw-jobs')}}">SSW JOBS</a></li>
                 </ul>
             </li>
 {{--            <li><a href="#">News</a></li>--}}

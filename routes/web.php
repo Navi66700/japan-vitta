@@ -29,6 +29,10 @@ Route::get('/sign-in', function () {
     return view('backend.sign-in');
 });
 
+Route::get('/ssw-jobs', function () {
+    return view('SSW.SSW JOBS.index');
+});
+
 Route::middleware('adminAuth')->group(function () {
 //Dashboard
     Route::get('admin-dashboard', [DashboardController::class, 'index'])->name('admin-dashboard');
