@@ -8,7 +8,7 @@
         </div>
     @endif
     <p style="font-size: 30px; font-weight: bold;">Food - Add Food</p>
-    <form class="row g-3" method="post" action="#"  enctype="multipart/form-data">
+    <form class="row g-3" method="post" action="{{route('create-food')}}"  enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Food Title</label>

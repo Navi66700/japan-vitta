@@ -67,17 +67,49 @@ Route::middleware('adminAuth')->group(function () {
     Route::get('foods',[FoodController::class, 'index'])->name('foods');
     Route::get('add-food',[FoodController::class, 'addFood'])->name('add-food');
     Route::get('add-food-video',[FoodController::class, 'addFoodVideo'])->name('add-food-video');
+    Route::post('create-food',[FoodController::class, 'createFood'])->name('create-food');
+    Route::get('update-food/{id}',[FoodController::class, 'updateFood'])->name('update-food');
+    Route::post('edit-food',[FoodController::class, 'editFood'])->name('edit-food');
+    Route::get('delete-food/{id}',[FoodController::class, 'deleteFood'])->name('delete-food');
+
+    Route::post('createFoodVideo',[FoodController::class, 'createFoodVideo'])->name('createFoodVideo');
+    Route::get('update-food-video/{id}',[FoodController::class, 'updateFoodVideo'])->name('update-food-video');
+    Route::post('edit-food-video',[FoodController::class, 'editFoodVideo'])->name('edit-food-video');
+    Route::get('delete-food-video/{id}',[FoodController::class, 'deleteFoodVideo'])->name('delete-food-video');
+
+
 
 
 //Agriculture
     Route::get('agri',[AgricultureController::class, 'index'])->name('agri');
     Route::get('add-agri',[AgricultureController::class, 'addAgri'])->name('add-agri');
     Route::get('add-agri-video',[AgricultureController::class, 'addAgriVideo'])->name('add-agri-video');
+    Route::post('create-agriculture',[AgricultureController::class, 'createAgriculture'])->name('create-agriculture');
+    Route::get('update-agriculture/{id}',[AgricultureController::class, 'updateAgriculture'])->name('update-agriculture');
+    Route::post('edit-agriculture',[AgricultureController::class, 'editAgriculture'])->name('edit-agriculture');
+    Route::get('delete-agriculture/{id}',[AgricultureController::class, 'deleteAgriculture'])->name('delete-agriculture');
+
+    Route::post('createAgricultureVideo',[AgricultureController::class, 'createAgricultureVideo'])->name('createAgricultureVideo');
+    Route::get('update-agriculture-video/{id}',[AgricultureController::class, 'updateAgricultureVideo'])->name('update-agriculture-video');
+    Route::post('edit-agriculture-video',[AgricultureController::class, 'editAgricultureVideo'])->name('edit-agriculture-video');
+    Route::get('delete-agriculture-video/{id}',[AgricultureController::class, 'deleteAgricultureVideo'])->name('delete-agriculture-video');
 
 //Caregiver
     Route::get('caregiver',[CaregiverController::class, 'index'])->name('caregiver');
     Route::get('add-caregiver',[CaregiverController::class, 'addCaregiver'])->name('add-caregiver');
     Route::get('add-caregiver-video',[CaregiverController::class, 'addCaregiverVideo'])->name('add-caregiver-video');
+    Route::post('create-caregiver',[CaregiverController::class, 'createCaregiver'])->name('create-caregiver');
+    Route::get('update-caregiver/{id}',[CaregiverController::class, 'updateCaregiver'])->name('update-caregiver');
+    Route::post('edit-caregiver',[CaregiverController::class, 'editCaregiver'])->name('edit-caregiver');
+    Route::get('delete-caregiver/{id}',[CaregiverController::class, 'deleteCaregiver'])->name('delete-caregiver');
+
+
+    Route::post('createCaregiverVideo',[CaregiverController::class, 'createCaregiverVideo'])->name('createCaregiverVideo');
+    Route::get('update-caregiver-video/{id}',[CaregiverController::class, 'updateCaregiverVideo'])->name('update-caregiver-video');
+    Route::post('edit-caregiver-video',[CaregiverController::class, 'editCaregiverVideo'])->name('edit-caregiver-video');
+    Route::get('delete-caregiver-video/{id}',[CaregiverController::class, 'deleteCaregiverVideo'])->name('delete-Caregiver-video');
+
+
 
 
 
@@ -87,6 +119,7 @@ Route::middleware('adminAuth')->group(function () {
     Route::get('delete-contact/{id}', [ContactUsController::class, 'deleteContact'])->name('delete-contact');
     Route::get('edit-contact/{id}', [ContactUsController::class, 'editContact'])->name('edit-contact');
     Route::get('update-contact/{id}', [ContactUsController::class, 'updateContact'])->name('update-contact');
+
 
 });
 

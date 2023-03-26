@@ -8,7 +8,7 @@
         </div>
     @endif
     <p style="font-size: 30px; font-weight: bold;">Caregiver - Add Caregiver</p>
-    <form class="row g-3" method="post" action="#"  enctype="multipart/form-data">
+    <form class="row g-3" method="post" action="{{(route('create-caregiver'))}}"  enctype="multipart/form-data">
         @csrf
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Caregiver Title</label>

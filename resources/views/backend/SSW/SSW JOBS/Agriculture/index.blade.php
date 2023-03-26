@@ -71,7 +71,7 @@
                                     <td>{{$agriculture->created_at}}</td>
                                     <td>{{$agriculture->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-agriculture', $agriculture->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <a href="{{url('/update-agriculture', $agriculture->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
                                         <button class="btn btn-danger delete-agriculture" value="{{$agriculture->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
@@ -111,8 +111,8 @@
                                     <td>{{$agriculture_video->created_at}}</td>
                                     <td>{{$agriculture_video->updated_at}}</td>
                                     <td>
-                                        <a href="{{url('/edit-agri-video', $agriculture_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
-                                        <button class="btn btn-danger delete-agri-video" value="{{$agriculture_video->id}}"><i class="bi bi-trash"></i></button>
+                                        <a href="{{url('/update-agriculture-video', $agriculture_video->id)}}" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                                        <button class="btn btn-danger delete-agriculture-video" value="{{$agriculture_video->id}}"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -138,8 +138,8 @@
 
         });
 
-        $('body').on('click', '.delete-jft', function() {
-            var JftID = $(this).val();
+        $('body').on('click', '.delete-agriculture', function() {
+            var AgricultureID = $(this).val();
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You can change this later.",
@@ -154,7 +154,28 @@
             }).then(function(result) {
                 console.log(result);
                 if (result.value) {
-                    window.location.href = "{{ url('delete-jft') }}/" + JftID;
+                    window.location.href = "{{ url('delete-agriculture') }}/" + AgricultureID;
+                }
+            });
+        });
+
+        $('body').on('click', '.delete-agriculture-video', function() {
+            var AgricultureVideoID = $(this).val();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You can change this later.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Delete it',
+                customClass: {
+                    confirmButton: 'btn btn-danger',
+                    cancelButton: 'btn btn-outline-danger ml-1'
+                },
+                buttonsStyling: false
+            }).then(function(result) {
+                console.log(result);
+                if (result.value) {
+                    window.location.href = "{{ url('delete-agriculture-video') }}/" + AgricultureVideoID;
                 }
             });
         });

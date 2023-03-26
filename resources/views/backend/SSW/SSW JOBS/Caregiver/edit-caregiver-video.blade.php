@@ -1,5 +1,5 @@
 @extends('backend.layout.masters')
-@section('title', 'Add Caregiver Video')
+@section('title', 'Edit JFT Video')
 @section('content')
     @if(session()->get('success'))
         <div class="alert alert-success bg-success text-light border-0 alert-dismissible fade show" role="alert">
@@ -7,19 +7,21 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <p style="font-size: 30px; font-weight: bold;">Caregiver - Add Caregiver Video</p>
-    <form class="row g-3" method="post" action="{{(route('createCaregiverVideo'))}}"  enctype="multipart/form-data">
+    <p style="font-size: 30px; font-weight: bold;">SSW - Edit Caregiver Video</p>
+    <form class="row g-3" method="post" action="{{(route('edit-caregiver-video'))}}"  enctype="multipart/form-data">
         @csrf
+        <input type="hidden" id="caregiver_video_id" name="caregiver_video_id" value="{{ $caregiver_videos->id }}">
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Caregiver Video Link</label>
-            <input type="text" class="form-control" id="inputName5" name="caregiver_video_link" placeholder="Caregiver Video Link" required>
+            <input type="text" class="form-control" id="inputName5" name="caregiver_video_link" placeholder="Caregiver Video Link" value="{{$caregiver_videos->caregiver_video_link}}" required>
         </div>
         <div class="col-md-6">
-            <label for="inputNumber" class="form-label">Caregiver Video Name</label>
-            <input class="form-control" type="text"  id="food_video_name" name="caregiver_video_name" placeholder="Caregiver Video Name" required>
+            <label for="inputName5" class="form-label">Caregiver Video Name</label>
+            <input type="text" class="form-control" id="inputName5" name="caregiver_video_name" placeholder="Caregiver Video Name" value="{{$caregiver_videos->caregiver_video_name}}" required>
         </div>
+
         <div class="text-center">
-            <button type="submit" class="btn btn-success">Create</button>
+            <button type="submit" class="btn btn-success">Update</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
         </div>
     </form><!-- End Multi Columns Form -->
@@ -32,4 +34,6 @@
         });
     </script>
 @endsection
+
+
 
