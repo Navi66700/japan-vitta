@@ -19,28 +19,29 @@
                         <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" style="width: 300px; height: 500px;" src="{{asset('storage/lessons-pdf/'.$lessonfourDetails->pdf_file)}}"></iframe>
                         <div class="main-button"><a rel="nofollow" href="{{url('/pdf-download', $lessonfourDetails->id)}}">Download Lesson</a></div>
                     </div>
+                    <br>
+                    <div class="col-12">
+                        <h6 style="color: white; font-weight: bold">{{ $lessonfourDetails->description }}</h6>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h6 style="color: white; font-weight: bold">{{ $lessonfourDetails->description }}</h6>
-                </div>
-            </div>
-            <div class="col">
-                <div class="video-caption">
-                    <!-- <h4>Learn About Japan</h4> -->
-                </div>
-                <br><br><br><br>
-                <article class="video-item">
-                    <figure>
-                        <div class="video-container">
-                            <iframe
-                                src="{{$lessonfourDetails->youtube_video_link}}"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope;"
-                                allowfullscreen></iframe>
-                        </div>
-                    </figure>
-                </article>
 
+                <div class="col-md-6">
+                    <div class="video-caption">
+                        <!-- <h4>Learn About Japan</h4> -->
+                    </div>
+                    <br><br><br><br>
+                    <article class="video-item">
+                        <figure>
+                            <div class="video-container">
+                                <iframe
+                                    src="{{$lessonfourDetails->youtube_video_link}}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
