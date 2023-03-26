@@ -41,6 +41,19 @@ Route::middleware('adminAuth')->group(function () {
     Route::post('update-lesson', [LessonController::class, 'updateLesson'])->name('update-lesson');
     Route::get('delete-lesson/{id}', [LessonController::class, 'deleteLesson'])->name('delete-lesson');
 
+    Route::get('add-lessons-N3-N2-N1', [LessonController::class, 'addLessonN1N2N3'])->name('add-lessons-N3-N2-N1');
+    Route::post('create-lesson-N3-N2-N1', [LessonController::class, 'createLessonN3N2N1'])->name('create-lesson-N3-N2-N1');
+    Route::get('edit-lesson-N3-N2-N1/{id}', [LessonController::class, 'editLessonN3N2N1'])->name('edit-lesson-N3-N2-N1');
+    Route::post('update-lesson-n3-n2-n1', [LessonController::class, 'updateLessonN3N2N1'])->name('update-lesson-n3-n2-n1');
+    Route::get('delete-lesson-n1-n2-n3/{id}', [LessonController::class, 'deleteLessonN1N2N3'])->name('delete-lesson-n1-n2-n3');
+    Route::get('add-lessons-video-N3-N2-N1', [LessonController::class, 'addLessonVideoN1N2N3'])->name('add-lessons-video-N3-N2-N1');
+    Route::post('create-lesson-video-N3-N2-N1', [LessonController::class, 'createLessonVideoN3N2N1'])->name('create-lesson-video-N3-N2-N1');
+    Route::get('edit-lesson-video-n1-n2-n3/{id}', [LessonController::class, 'editLessonVideoN1N2N3'])->name('edit-lesson-video-n1-n2-n3');
+    Route::post('update-lesson-video-n1-n2-n3', [LessonController::class, 'updateLessonVideoN3N2N1'])->name('update-lesson-video-n1-n2-n3');
+    Route::get('delete-lesson-video-n1-n2-n3/{id}', [LessonController::class, 'deleteLessonVideoN1N2N3'])->name('delete-lesson-video-n1-n2-n3');
+
+
+
 //Past-papers
     Route::get('past-papers', [PastPaperController::class, 'index'])->name('past-papers');
     Route::get('add-papers', [PastPaperController::class, 'addPapers'])->name('add-papers');

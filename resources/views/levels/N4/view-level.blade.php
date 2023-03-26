@@ -33,7 +33,7 @@
                     <figure>
                         <div class="video-container">
                             <iframe
-                                src="{{$lessonfourDetails->youtube_link}}"
+                                src="{{$lessonfourDetails->youtube_video_link}}"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope;"
                                 allowfullscreen></iframe>

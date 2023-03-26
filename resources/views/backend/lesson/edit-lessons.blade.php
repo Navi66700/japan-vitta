@@ -41,7 +41,7 @@
         </div>
         <div class="col-12">
             <label for="inputAddress2" class="form-label">Youtube Link</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Youtube Link" name="youtube_link" value="{{$lessons->youtube_link}}">
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Youtube Link" name="youtube_video_link" value="{{$lessons->youtube_video_link}}">
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Update</button>
