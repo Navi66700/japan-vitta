@@ -1,5 +1,5 @@
 @extends('layout.masters')
-@section('title', 'Contact Us')
+@section('title', 'About Us')
 @section('content')
 <div class="container-fluid contact" data-section="section6">
     <br><br><br><br><br><br>
@@ -63,15 +63,14 @@
             <div class="col-md-6">
                 <div class="row w-100">
                     <div class="col-md-6">
-                        <img src="{{asset('homepage/assets/images/Aboutus.jpg')}}" alt="" style="height:650px; width: 650px;">
+
                     </div>
-{{--                    <div class="col-lg-12 my-6">--}}
-{{--                        <iframe--}}
-{{--                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102854.14303888605!2d79.97206769920777!3d6.665156289988916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2374747e55267%3A0x538d01b64ceaf960!2sKAIGA%20GRAPHIC!5e0!3m2!1sen!2slk!4v1671513244750!5m2!1sen!2slk"--}}
-{{--                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"--}}
-{{--                            referrerpolicy="no-referrer-when-downgrade" class="w-100" height="450" allowfullscreen=""--}}
-{{--                            loading="lazy"></iframe>--}}
-{{--                    </div>--}}
+                     <div class="col-lg-12 my-6">
+
+                        <img src="{{asset('homepage/assets/images/Aboutus.jpg')}}" alt="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-100" height="450" allowfullscreen=""
+                        loading="lazy">
+                    </div>
 
                 </div>
             </div>
