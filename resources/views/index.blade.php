@@ -379,7 +379,7 @@
                     <h4>Learn Everything About <em>Japan</em></h4>
                     <p> Japan is an island nation located in East Asia, with Tokyo as its capital city. It is known for its rich cultural heritage, advanced technology, delicious cuisine, and beautiful landmarks. With a population of over 125 million people, Japan is one of the most populous countries in the world. The Japanese society is also renowned for its emphasis on discipline, politeness, and respect for others.
                         <br><br>Despite being a modern and developed country, Japan has managed to preserve its traditional culture and practices, making it a unique and fascinating destination for visitors from around the world.</p>
-                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="blank">Learn More</a></div>
+                    <div class="main-button"><a rel="nofollow" href="https://www.facebook.com/JAPANVITTA?mibextid=ZbWKwL" target="blank">Learn More</a></div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -422,7 +422,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>JLPT Registration</h4>
-                                    <p>The Japanese-Language Proficiency Test (JLPT) has been offered by the Japan Foundation and Japan Educational Exchanges and Services (formerly Association of International Education, Japan) since 1984 as a reliable means of evaluating and certifying the Japanese proficiency of non-native speakers. At the beginning, there were approximately 7,000 examinees worldwide. In 2011, there were as many as 610,000 examinees around the globe, making JLPT the largest-scale Japanese-language test in the world.
+                                    <p style="text-align: justify">The Japanese-Language Proficiency Test (JLPT) has been offered by the Japan Foundation and Japan Educational Exchanges and Services (formerly Association of International Education, Japan) since 1984 as a reliable means of evaluating and certifying the Japanese proficiency of non-native speakers. At the beginning, there were approximately 7,000 examinees worldwide. In 2011, there were as many as 610,000 examinees around the globe, making JLPT the largest-scale Japanese-language test in the world.
 
                                         The JLPT has five levels: N1, N2, N3, N4 and N5. The easiest level is N5 and the most difficult level is N1.
 
@@ -439,7 +439,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>JLCT Registration</h4>
-                                    <p>Principally this test is conducted to measure the Japanese language communication skill of a non-native Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. Further JLCT checks Japanese-language communication skill by dividing the test to Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
+                                    <p style="text-align: justify">Principally this test is conducted to measure the Japanese language communication skill of a non-native Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. Further JLCT checks Japanese-language communication skill by dividing the test to Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
 {{--                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>--}}
                                     <div class="main-button"><a rel="nofollow" href="http://jlctsrilanka.lk/application/submit.php" target="blank">Register Now</a></div>
                                 </div>
@@ -452,7 +452,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>NAT-Test Registration</h4>
-                                    <p>About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers. The tests are separated by difficulty (five levels) and general ability is measured in three categories: Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
+                                    <p style="text-align: justify">About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers. The tests are separated by difficulty (five levels) and general ability is measured in three categories: Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
                                     <div class="main-button"><a rel="nofollow" href="https://colombo.nat-test.jp" target="blank">Register Now</a></div>
                                 </div>
                             </div>
