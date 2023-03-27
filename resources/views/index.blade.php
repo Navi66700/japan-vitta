@@ -484,7 +484,7 @@
 
             <div class="left-content text-center">
 
-                <h1 style="text-align: center">Follow Us On <em style="color: #f5a425">Social Media</em></h1>
+                <h1 style="text-align: center">Follow us on <em style="color: #f5a425">Social Media</em></h1>
 
             </div>
         </div>
