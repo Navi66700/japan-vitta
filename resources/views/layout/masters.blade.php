@@ -52,7 +52,7 @@
     <nav id="menu" class="main-nav" role="navigation">
         <ul class="main-menu">
             <li><a href="{{url('/')}}">Home</a></li>
-            <li class="has-submenu"><a href="#">Levels</a>
+            <li class="has-submenu"><a href="#">Lessons</a>
                 <ul class="sub-menu">
                     <li><a href="{{route('view-level-5')}}">N 05</a></li>
                     <li><a href="{{route('view-level-4')}}">N 04</a></li>

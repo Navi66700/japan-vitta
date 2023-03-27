@@ -24,25 +24,26 @@
                 {{--                <div class="col-md-6">--}}
                 {{--                    <h6 style="color: white; font-weight: bold">{{ $papertwoDetails->description }}</h6>--}}
                 {{--                </div>--}}
-            </div>
-            <div class="col">
-                <div class="video-caption">
-                    <!-- <h4>Learn About Japan</h4> -->
-                </div>
-                <br><br><br><br>
-                <article class="video-item">
-                    <figure>
-                        <div class="video-container">
-                            <iframe
-                                src="{{$paperfourDetails->youtube_link}}"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope;"
-                                allowfullscreen></iframe>
-                        </div>
-                    </figure>
-                </article>
+                <div class="col">
+                    <div class="video-caption">
+                        <!-- <h4>Learn About Japan</h4> -->
+                    </div>
+                    <br><br><br><br>
+                    <article class="video-item">
+                        <figure>
+                            <div class="video-container">
+                                <iframe
+                                    src="{{$paperfourDetails->youtube_link}}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope;"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </figure>
+                    </article>
 
+                </div>
             </div>
+
         </div>
     </div>
 @endsection
