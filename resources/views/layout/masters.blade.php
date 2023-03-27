@@ -95,6 +95,7 @@
 
                     <ul>
                         <div class="logo">
+                            <img src="{{asset('homepage/assets/images/jp-logo.png')}}" style="width: 80px; height: 70px;" alt="japan vitta">
                             <h4 style="color: white;">Japan Vitta</h4>
                         </div>
                         <li><a style="color: lightgray;" href="#">Kalutara South, Western Province, Sri Lanka</a></li>
