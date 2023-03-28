@@ -17,7 +17,7 @@
         </div>
         <div class="col-md-6">
             <label for="inputNumber" class="form-label">Select PDF</label>
-            <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile()" @if ($jfts->pdf_file) @else required @endif />
+            <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile_2()" @if ($jfts->pdf_file) @else required @endif />
 
             <div class="mb-3">
                 <div id="new_image_container">
@@ -38,7 +38,7 @@
 
             <div class="mb-3">
                 <div id="new_image_container">
-                    @if ($jfts->pdf_file)
+                    @if ($jfts->jft_lesson_image)
                     <img id="img_file_preview" name="jft_lesson_image" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/jft-lessons-image/'.$jfts->jft_lesson_image)}}"></img>
                         {{-- <img src="{{asset('storage/jft-pdf/'.$jfts->pdf_file)}}" id="new_image_preview" /> --}}
                     @else
@@ -80,6 +80,48 @@
 
         }
     }
+
+    function uploadFile_2() {
+        var pdf_preview = document.getElementById("pdf_file_preview");
+        var file = document.querySelector("input[type=file]").files[0];
+
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            pdf_preview.src = reader.result;
+            document.getElementById("base64").value = reader.result;
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+
+        } else {
+            pdf_preview.src = "";
+
+        }
+    }
+
+    $(document).ready(function(e) {
+            $('#pdf_file').change(function() {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#pdf_file_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
+        });
+
+
+        $(document).ready(function(e) {
+            $('#jft_lesson_image').change(function() {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#img_file_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
+        });
+
+
     </script>
 @endsection
 
