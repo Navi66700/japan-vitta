@@ -52,6 +52,7 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Food Image</th>
                                     <th scope="col">Food Title</th>
                                     <th scope="col">PDF File</th>
                                     <th scope="col">Created At</th>
@@ -63,9 +64,9 @@
                                 @foreach($foods as $key=>$food)
                                 <tr>
                                     <th scope="row">{{$key +1}}</th>
-                                    {{-- <td>
-                                        <img src="{{asset('storage/lessons-image/'.$lesson->lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
-                                    </td> --}}
+                                    <td>
+                                        <img src="{{asset('storage/food-image/'.$food->food_image)}}" class="rounded" style="height: 80px; width: 100px;">
+                                    </td>
                                     <td>{{$food->food_title}}</td>
                                     <td>{{$food->pdf_file}}</td>
                                     <td>{{$food->created_at}}</td>

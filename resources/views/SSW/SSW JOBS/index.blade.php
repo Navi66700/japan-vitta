@@ -32,7 +32,7 @@
                                 <a href="" class="text-reset">
                                     <h5 class="card-title mb-3">Agriculture Lessons</h5>
                                 </a>
-                                <a rel="nofollow" class="btn btn-warning" href="{{url('agriculture')}}">View Lessons</a>
+                                <a rel="nofollow" class="btn btn-warning" href="{{route('view-agriculture')}}">View Lessons</a>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <a href="" class="text-reset">
                                 <h5 class="card-title mb-3">Food Lessons</h5>
                             </a>
-                            <a rel="nofollow" class="btn btn-warning" href="{{url('food')}} "> View Lessons</a>
+                            <a rel="nofollow" class="btn btn-warning" href="{{route('view-foods')}} "> View Lessons</a>
                         </div>
                     </div>
                 </div>

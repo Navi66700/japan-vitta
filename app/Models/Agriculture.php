@@ -12,5 +12,6 @@ class Agriculture extends Model
     protected $fillable = [
         'agriculture_title',
         'pdf_file',
+        'agri_image',
     ];
 }

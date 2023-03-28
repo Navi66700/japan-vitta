@@ -19,7 +19,7 @@
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="card">
                             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                                <img src="{{asset('homepage/assets/images/n4.jpeg')}}" class="w-100" />
+                                <img src="{{asset('storage/jft-lessons-image/'.$jft->jft_lesson_image)}}" class="w-100" />
                                 <a href="#!">
                                     <div class="mask">
                                     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="text-center container py-5">
                 <div class="row">
-                    @foreach($jfts as $jft)
+                    @foreach($jft_videos as $jft_video)
                         <div class="col-lg-4 col-md-4 mb-4">
                             <div class="card">
                                 <div class="card-body">
@@ -49,7 +49,7 @@
                                         <figure>
                                             <div class="video-container">
                                                 <iframe
-                                                    src="{{$jft->video_link}}"
+                                                    src="{{$jft_video->jft_video_link}}"
                                                     frameborder="0"
                                                     allow="accelerometer; autoplay; encrypted-media; gyroscope;"
                                                     allowfullscreen></iframe>

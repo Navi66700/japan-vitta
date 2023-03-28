@@ -12,5 +12,6 @@ class Jft extends Model
     protected $fillable = [
         'pdf_name',
         'pdf_file',
+        'jft_lesson_image',
     ];
 }

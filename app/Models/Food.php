@@ -12,5 +12,6 @@ class Food extends Model
     protected $fillable = [
         'food_title',
         'pdf_file',
+        'food_image',
     ];
 }

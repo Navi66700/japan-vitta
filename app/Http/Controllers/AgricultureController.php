@@ -20,6 +20,23 @@ class AgricultureController extends Controller
         ]);
     }
 
+    public function viewAgriculture()
+    {
+        $agricultures = Agriculture::get();
+        $agriculture_videos = AgricultureVideo::get();
+        return view('SSW/SSW JOBS/Agriculture/index',[
+            'agricultures' => $agricultures,
+            'agriculture_videos' => $agriculture_videos
+        ]);
+    }
+
+    public function pdfDownloadAgri($id)
+    {
+        $data = Agriculture::where('id',$id)->first();
+        $file_path = public_path("storage/agriculture-pdf/{$data->pdf_file}");
+        return response()->download($file_path);
+    }
+
     public function addAgri()
     {
         return view('backend/SSW/SSW JOBS/Agriculture/add-agriculture');
@@ -37,6 +54,10 @@ class AgricultureController extends Controller
         $pdf_file = $request->file('pdf_file')->getClientOriginalName();
         $request->file('pdf_file')->storeAs('public/agriculture-pdf', $request->pdf_file->getClientOriginalName());
         $agri->pdf_file = $pdf_file;
+
+        $agri_image = $request->file('agri_image')->getClientOriginalName();
+        $request->file('agri_image')->storeAs('public/agriculture-image', $request->agri_image->getClientOriginalName());
+        $agri->agri_image = $agri_image;
 
         $agri->save();
 
@@ -62,6 +83,13 @@ class AgricultureController extends Controller
         return $file->getClientOriginalName();
     }
 
+    public function uploadAgricultureImage(Request $request) {
+        $file = $request->file('agri_image');
+        $destinationPath = 'storage/agriculture-image';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        return $file->getClientOriginalName();
+    }
+
     public function editAgriculture(Request $request)
     {
         $agriculture = Agriculture::find($request->agriculture_id);
@@ -69,6 +97,10 @@ class AgricultureController extends Controller
         if($request->has('pdf_file')){
             $agriculturepdfpath = self::uploadAgriculturePDF($request);
             $agriculture->pdf_file = $agriculturepdfpath;
+        }
+        if($request->has('agri_image')){
+            $agricultureImgpath = self::uploadAgricultureImage($request);
+            $agriculture->agri_image = $agricultureImgpath;
         }
         $agriculture->update();
         return redirect()->back()->with('success', 'Agriculture Updated Successfully');

@@ -52,6 +52,7 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Agriculture Image</th>
                                     <th scope="col">Agriculture Title</th>
                                     <th scope="col">PDF File</th>
                                     <th scope="col">Created At</th>
@@ -63,9 +64,9 @@
                                 @foreach($agricultures as $key=>$agriculture)
                                 <tr>
                                     <th scope="row">{{$key +1}}</th>
-                                    {{-- <td>
-                                        <img src="{{asset('storage/lessons-image/'.$lesson->lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
-                                    </td> --}}
+                                    <td>
+                                        <img src="{{asset('storage/agriculture-image/'.$agriculture->agri_image)}}" class="rounded" style="height: 80px; width: 100px;">
+                                    </td>
                                     <td>{{$agriculture->agriculture_title}}</td>
                                     <td>{{$agriculture->pdf_file}}</td>
                                     <td>{{$agriculture->created_at}}</td>

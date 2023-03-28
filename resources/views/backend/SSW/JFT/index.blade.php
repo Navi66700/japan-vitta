@@ -49,6 +49,7 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">JFT Lesson Image</th>
                             <th scope="col">JFT Title</th>
                             <th scope="col">PDF File</th>
                             <th scope="col">Created At</th>
@@ -60,9 +61,9 @@
                         @foreach($jfts as $key=>$jft)
                         <tr>
                             <th scope="row">{{$key +1}}</th>
-                            {{-- <td>
-                                <img src="{{asset('storage/lessons-image/'.$lesson->lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
-                            </td> --}}
+                            <td>
+                                <img src="{{asset('storage/jft-lessons-image/'.$jft->jft_lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
+                            </td>
                             <td>{{$jft->pdf_name}}</td>
                             <td>{{$jft->pdf_file}}</td>
                             <td>{{$jft->created_at}}</td>

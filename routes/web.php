@@ -199,6 +199,17 @@ Route::get('view-jft', [JftController::class, 'viewJft'])->name('view-jft');
 //Dounload JFT PDF
 Route::get('jft-pdf-download/{id}', [JftController::class, 'jftPdfDownload'])->name('jft-pdf-download');
 
+
+//Foods
+Route::get('view-foods',[FoodController::class, 'viewFoodDetails'])->name('view-foods');
+Route::get('/food-pdf-download/{id}', [FoodController::class, 'pdfDownloadFood'])->name('/food-pdf-download');
+
+
+//Agriculture
+Route::get('view-agriculture',[AgricultureController::class, 'viewAgriculture'])->name('view-agriculture');
+Route::get('/agri-pdf-download/{id}', [AgricultureController::class, 'pdfDownloadAgri'])->name('/agri-pdf-download');
+
+
 //Login
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');;

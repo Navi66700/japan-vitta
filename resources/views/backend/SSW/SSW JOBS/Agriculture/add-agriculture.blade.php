@@ -18,6 +18,14 @@
             <label for="inputNumber" class="form-label">Select PDF</label>
             <input class="form-control" type="file"  id="pdfFile" name="pdf_file" required>
         </div>
+
+        <div class="col-md-6">
+            <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="file" id="image" name="agri_image" required>
+                <img id="agri_image" name="agri_image" class="img-fluid rounded" height="100" width="100" src="#">
+            </div>
+        </div>
         <div class="text-center">
             <button type="submit" class="btn btn-success">Create</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
@@ -29,6 +37,16 @@
     <script>
         $(".alert").fadeTo(2000, 500).slideUp(500, function(){
             $(".alert").slideUp(500);
+        });
+
+        $(document).ready(function(e) {
+            $('#image').change(function() {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#agri_image').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
         });
     </script>
 @endsection
