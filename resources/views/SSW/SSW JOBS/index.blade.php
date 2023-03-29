@@ -19,7 +19,7 @@
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="card">
                             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                                <img src="{{asset('homepage/assets/images/n4.jpeg')}}" class="w-100" />
+                                <img src="{{asset('homepage/assets/images/agriculture.jpeg')}}" class="w-100" />
                                 <a href="#!">
                                     <div class="mask">
                                     </div>
@@ -39,7 +39,7 @@
                 <div class="col-lg-4 col-md-4 mb-4">
                     <div class="card">
                         <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="{{asset('homepage/assets/images/n4.jpeg')}}" class="w-100" />
+                            <img src="{{asset('homepage/assets/images/food.jpeg')}}" class="w-100" />
                             <a href="#!">
                                 <div class="mask">
                                 </div>
@@ -59,7 +59,7 @@
                 <div class="col-lg-4 col-md-4 mb-4">
                     <div class="card">
                         <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="{{asset('homepage/assets/images/n4.jpeg')}}" class="w-100" />
+                            <img src="{{asset('homepage/assets/images/caregiver.jpeg')}}" class="w-100" />
                             <a href="#!">
                                 <div class="mask">
                                 </div>

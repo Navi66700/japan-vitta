@@ -29,7 +29,7 @@
                 <div class="features-post">
                     <div class="features-content">
                         <div class="content-show">
-                            <h4><i class="fa fa-pencil"></i>All Courses</h4>
+                            <h4><i class="fa fa-pencil"></i>Lessons</h4>
                         </div>
                         <div class="content-hide">
                             <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
@@ -43,7 +43,7 @@
                 <div class="features-post second-features">
                     <div class="features-content">
                         <div class="content-show">
-                            <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                            <h4><i class="fa fa-graduation-cap"></i>Psst Papers</h4>
                         </div>
                         <div class="content-hide">
                             <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
@@ -57,7 +57,7 @@
                 <div class="features-post third-features">
                     <div class="features-content">
                         <div class="content-show">
-                            <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                            <h4><i class="fa fa-book"></i>SSW</h4>
                         </div>
                         <div class="content-hide">
                             <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
@@ -422,11 +422,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>JLPT Registration</h4>
-                                    <p style="text-align: justify">The Japanese-Language Proficiency Test (JLPT) has been offered by the Japan Foundation and Japan Educational Exchanges and Services (formerly Association of International Education, Japan) since 1984 as a reliable means of evaluating and certifying the Japanese proficiency of non-native speakers. At the beginning, there were approximately 7,000 examinees worldwide. In 2011, there were as many as 610,000 examinees around the globe, making JLPT the largest-scale Japanese-language test in the world.
-
-                                        The JLPT has five levels: N1, N2, N3, N4 and N5. The easiest level is N5 and the most difficult level is N1.
-
-                                        N4 and N5 measure the level of understanding of basic Japanese mainly learned in class. N1and N2 measure the level of understanding of Japanese used in a broad range of scenes in actual everyday life. N3 is a bridging level between N1/N2 and N4/N5.</p>
+                                    <p style="text-align: justify">The JLPT is an internationally recognized test for non-native speakers of Japanese,
+                                        with five levels that measure reading, writing, listening, and speaking abilities. The test is used for employment and education purposes, and has grown in popularity since its inception
+                                        in 1984, with over 1.3 million people taking the test worldwide as of 2021.</p>
                                     <div class="main-button"><a rel="nofollow" href="https://www.jlpt.jp/e/" target="blank">Register Now</a></div>
                                 </div>
 
