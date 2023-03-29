@@ -18,18 +18,36 @@
         <div class="col-md-6">
             <label for="inputNumber" class="form-label">Select PDF</label>
             <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile()" @if ($caregiver->pdf_file) @else required @endif />
-        </div>
-        <div class="mb-3">
-            <div id="new_image_container">
-                @if ($caregiver->pdf_file)
-                    <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/caregiver-pdf/'.$caregiver->pdf_file)}}"></iframe>
-                    {{-- <img src="{{asset('storage/jft-pdf/'.$jfts->pdf_file)}}" id="new_image_preview" /> --}}
-                @else
-                    <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="#"></iframe>
-                    {{-- <img src="#" id="new_image_preview" /> --}}
-                @endif
+            <div class="mb-3">
+                <div id="new_image_container">
+                    @if ($caregiver->pdf_file)
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/caregiver-pdf/'.$caregiver->pdf_file)}}"></iframe>
+                        {{-- <img src="{{asset('storage/jft-pdf/'.$jfts->pdf_file)}}" id="new_image_preview" /> --}}
+                    @else
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="#"></iframe>
+                        {{-- <img src="#" id="new_image_preview" /> --}}
+                    @endif
+                </div>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <label for="inputNumber" class="form-label">Select Caregiver Image</label>
+            <input type="file" class="form-control" id="care_image" name="care_image" onchange="uploadFile_2()" @if ($caregiver->care_image) @else required @endif />
+
+            <div class="mb-3">
+                <div id="new_image_container">
+                    @if ($caregiver->care_image)
+                        <img id="care_preview" name="care_image" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/caregiver-image/'.$caregiver->care_image)}}"></img>
+
+                    @else
+                        <img id="care_preview" name="care_image" class="img-fluid rounded" height="100" width="100" src="#"></img>
+
+                    @endif
+                </div>
+            </div>
+        </div>
+
         <div class="text-center">
             <button type="submit" class="btn btn-success">Update</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
@@ -63,6 +81,45 @@
         }
 
 
+        function uploadFile_2() {
+            var care_preview = document.getElementById("care_preview");
+            var file = document.querySelector("input[type=file]").files[0];
+
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                care_preview.src = reader.result;
+                document.getElementById("base64").value = reader.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+
+            } else {
+                care_preview.src = "";
+
+            }
+        }
+
+        $(document).ready(function(e) {
+            $('#pdf_file').change(function() {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#pdf_file_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
+        });
+
+
+        $(document).ready(function(e) {
+            $('#care_image').change(function() {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#care_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            });
+        });
 
     </script>
 @endsection

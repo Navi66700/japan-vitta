@@ -52,6 +52,7 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Caregiver Image</th>
                                     <th scope="col">Caregiver Title</th>
                                     <th scope="col">PDF File</th>
                                     <th scope="col">Created At</th>
@@ -63,9 +64,9 @@
                                 @foreach($caregivers as $key=>$caregiver)
                                 <tr>
                                     <th scope="row">{{$key +1}}</th>
-                                    {{-- <td>
-                                        <img src="{{asset('storage/lessons-image/'.$lesson->lesson_image)}}" class="rounded" style="height: 80px; width: 100px;">
-                                    </td> --}}
+                                    <td>
+                                        <img src="{{asset('storage/caregiver-image/'.$caregiver->care_image)}}" class="rounded" style="height: 80px; width: 100px;">
+                                    </td>
                                     <td>{{$caregiver->caregiver_title}}</td>
                                     <td>{{$caregiver->pdf_file}}</td>
                                     <td>{{$caregiver->created_at}}</td>

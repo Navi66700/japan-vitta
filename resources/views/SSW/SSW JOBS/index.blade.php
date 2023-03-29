@@ -72,7 +72,7 @@
                             <a href="" class="text-reset">
                                 <h5 class="card-title mb-3">Caregiver Lessons</h5>
                             </a>
-                            <a rel="nofollow" class="btn btn-warning" href="{{(url('caregiver1'))}}">View Lessons</a>
+                            <a rel="nofollow" class="btn btn-warning" href="{{(route('view-caregiver'))}}">View Lessons</a>
                         </div>
                     </div>
                 </div>

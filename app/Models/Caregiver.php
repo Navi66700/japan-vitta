@@ -12,5 +12,6 @@ class Caregiver extends Model
     protected $fillable = [
         'caregiver_title',
         'pdf_file',
+        'care_image',
     ];
 }

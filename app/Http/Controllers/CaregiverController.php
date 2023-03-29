@@ -30,6 +30,23 @@ class CaregiverController extends Controller
     return view('backend/SSW/SSW JOBS/Caregiver/add-caregiver-video');
    }
 
+   public function viewCaregivers()
+   {
+    $caregivers = Caregiver::get();
+    $caregiver_videos = CaregiverVideo::get();
+    return view('SSW/SSW JOBS/Caregiver/index',[
+        'caregivers' => $caregivers,
+        'caregiver_videos' => $caregiver_videos
+    ]);
+   }
+
+   public function pdfDownloadCare($id)
+   {
+       $data = Caregiver::where('id',$id)->first();
+       $file_path = public_path("storage/caregiver-pdf/{$data->pdf_file}");
+       return response()->download($file_path);
+   }
+
     public function createCaregiver(Request $request)
     {
         $caregiver = new Caregiver();
@@ -37,6 +54,10 @@ class CaregiverController extends Controller
         $pdf_file = $request->file('pdf_file')->getClientOriginalName();
         $request->file('pdf_file')->storeAs('public/caregiver-pdf', $request->pdf_file->getClientOriginalName());
         $caregiver->pdf_file = $pdf_file;
+
+        $care_image = $request->file('care_image')->getClientOriginalName();
+        $request->file('care_image')->storeAs('public/caregiver-image', $request->care_image->getClientOriginalName());
+        $caregiver->care_image = $care_image;
 
         $caregiver->save();
 
@@ -61,6 +82,13 @@ class CaregiverController extends Controller
         return $file->getClientOriginalName();
     }
 
+    public function uploadCareImage(Request $request) {
+        $file = $request->file('care_image');
+        $destinationPath = 'storage/caregiver-image';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        return $file->getClientOriginalName();
+    }
+
     public function editCaregiver(Request $request)
     {
         $caregiver = Caregiver::find($request->caregiver_id);
@@ -68,6 +96,10 @@ class CaregiverController extends Controller
         if($request->has('pdf_file')){
             $caregiverpdfpath = self::uploadCaregiverPDF($request);
             $caregiver->pdf_file = $caregiverpdfpath;
+        }
+        if($request->has('care_image')){
+            $careimgpath = self::uploadCareImage($request);
+            $caregiver->care_image = $careimgpath;
         }
         $caregiver->update();
         return redirect()->back()->with('success', 'Caregiver Updated Successfully');

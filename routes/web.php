@@ -209,6 +209,10 @@ Route::get('/food-pdf-download/{id}', [FoodController::class, 'pdfDownloadFood']
 Route::get('view-agriculture',[AgricultureController::class, 'viewAgriculture'])->name('view-agriculture');
 Route::get('/agri-pdf-download/{id}', [AgricultureController::class, 'pdfDownloadAgri'])->name('/agri-pdf-download');
 
+//Caregiver
+Route::get('view-caregiver',[CaregiverController::class, 'viewCaregivers'])->name('view-caregiver');
+Route::get('/care-pdf-download/{id}', [CaregiverController::class, 'pdfDownloadCare'])->name('/care-pdf-download');
+
 
 //Login
 Route::post('/login', [LoginController::class, 'login'])->name('login');
