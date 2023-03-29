@@ -1,17 +1,22 @@
 <?php
 
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LessonController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PastPaperController;
-use App\Http\Controllers\JftController;
-use App\Http\Controllers\FoodController;
-use App\Http\Controllers\AgricultureController;
-use App\Http\Controllers\CaregiverController;
 use App\Models\Agriculture;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JftController;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\FoodController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\CaregiverController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PastPaperController;
+use App\Http\Controllers\AgricultureController;
 
+
+Route::get('/link',function(){
+    Artisan::call('storage:link');
+});
 
 Route::get('/', function () {
     return view('index');
