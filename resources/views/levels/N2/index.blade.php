@@ -11,7 +11,7 @@
     <div class="container-fluid contact" data-section="section6">
         <br><br><br><br><br><br>
         <center>
-            <h1 style="color: aliceblue;">Level 02</h1>
+            <h1 style="color: aliceblue;">N 02</h1>
         </center>
         <div class="text-center container py-5">
             <div class="row">

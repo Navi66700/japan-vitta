@@ -29,15 +29,6 @@
                 <p style="font-size:20px; color:white;line-height: 1.5;text-align: center;  font-family: 'Times New Roman'"; >
                 To all of you who are interested in visiting Japan,
 
-                <p style="font-size:20px; color:white; text-align: center;">
-                To all of you who are interested in visiting Japan, which has the third largest economy in the world,
-
-                </p>
-
-                <p style="font-size:20px; color:white;line-height: 1.5;text-align: center; font-family: 'Times New Roman'">
-                    which has the third largest economy in the world, Free self-study Japanese is provided for anyone interested in learning Japanese.
-                </p>
-
                 <p style="font-size:20px; color:white;line-height: 1.5; text-align: center;font-family: 'Times New Roman'";>
                 This website is designed for people coming to Japan for study, work or tourism.
                 Japanese from scratch JLPT / NAT / JLCT / N5 | N4 | N3 | N2 | The Japan Vitta website was created to
