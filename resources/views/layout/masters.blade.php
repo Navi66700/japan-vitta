@@ -98,7 +98,7 @@
                             <img src="{{asset('homepage/assets/images/jp-logo.png')}}" style="width: 80px; height: 70px;" alt="japan vitta">
                             <h4 style="color: white;">Japan Vitta</h4>
                         </div>
-                        <li><a style="color: lightgray;" href="#">Kalutara South, Western Province, Sri Lanka</a></li>
+                        <li><a style="color: lightgray;" href="#">Colombo, Western Province, Sri Lanka</a></li>
                         <li><a style="color: lightgray;" href="#">info@japanvitta.com</a></li>
                         <li><a style="color: lightgray;" href="#">+94 77 929 78 81</a></li>
 {{--                        <li><a style="color: lightgray;" href="#">+94 76 414 96 30</a></li>--}}

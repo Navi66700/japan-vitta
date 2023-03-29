@@ -390,7 +390,7 @@
                     <figure>
                         <div class="video-container">
                             <iframe
-                                src="https://www.youtube.com/embed/1WTOS2kNlQU"
+                                src="https://www.youtube.com/embed/CxuiFNYnEr4"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope;"
                                 allowfullscreen></iframe>
@@ -425,7 +425,9 @@
                                     <p style="text-align: justify">The JLPT is an internationally recognized test for non-native speakers of Japanese,
                                         with five levels that measure reading, writing, listening, and speaking abilities. The test is used for employment and education purposes, and has grown in popularity since its inception
                                         in 1984, with over 1.3 million people taking the test worldwide as of 2021.</p>
-                                    <div class="main-button"><a rel="nofollow" href="https://www.jlpt.jp/e/" target="blank">Register Now</a></div>
+                                    <div class="main-button"><a rel="nofollow" href=" https://www.jlpt.jp/e/" target="blank">Register For Sri Lankans</a></div>
+                                    <br>
+                                    <div class="main-button"><a rel="nofollow" href="https://www.jlpt.jp/e/application/domestic_index.html" target="blank">Register For Others</a></div>
                                 </div>
 
                             </div>
@@ -437,9 +439,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>JLCT Registration</h4>
-                                    <p style="text-align: justify">Principally this test is conducted to measure the Japanese language communication skill of a non-native Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. Further JLCT checks Japanese-language communication skill by dividing the test to Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
+                                    <p style="text-align: justify">Principally this test is conducted to measure the Japanese language communication skill of a non-native
+                                        Japanese people. It has 5 levels and those are JCT1, JCT2, JCT3, JCT4, JCT5. F
+                                        urther JLCT checks Japanese-language communication skill by dividing the test to
+                                        Japanese Language knowledge (Character, vocabulary, grammar), Comprehension reading and Listening.</p>
 {{--                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>--}}
-                                    <div class="main-button"><a rel="nofollow" href="http://jlctsrilanka.lk/application/submit.php" target="blank">Register Now</a></div>
+{{--                                    <p style="text-align: justify">Register For Sri Lankans</p>--}}
+                                    <div class="main-button"><a rel="nofollow" href="http://jlctsrilanka.lk/application/submit.php" target="blank">Register For Sri Lankans</a></div>
+                                    <br>
+{{--                                    <p style="text-align: justify"> Register For Others </p>--}}
+                                    <div class="main-button"><a rel="nofollow" href=" https://jlct.jp/e/index.html" target="blank">Register For Others</a></div>
                                 </div>
                             </div>
                         </article>
@@ -450,8 +459,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>NAT-Test Registration</h4>
-                                    <p style="text-align: justify">About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers. The tests are separated by difficulty (five levels) and general ability is measured in three categories: Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
-                                    <div class="main-button"><a rel="nofollow" href="https://colombo.nat-test.jp" target="blank">Register Now</a></div>
+                                    <p style="text-align: justify">About the test	The Japanese Language NAT-TEST is an examination that measures the Japanese language ability of students who are not native Japanese speakers.
+                                        The tests are separated by difficulty (five levels) and general ability is measured in three categories:
+                                        Grammar/Vocabulary, Listening and Reading Comprehension. The format of the exam and the types of
+                                        questions are equivalent to those that appear on the Japanese Language Ability Test (JLPT).</p>
+
+{{--                                    <p style="text-align: justify">Register For Sri Lankans</p>--}}
+                                    <div class="main-button"><a rel="nofollow" href="https://colombo.nat-test.jp" target="blank">Register For Sri Lankans</a></div>
+                                    <br>
+{{--                                    <p style="text-align: justify; "> Register For Others </p>--}}
+                                    <div class="main-button" ><a rel="nofollow" href="http://www.nat-test.com/en/about.html" target="blank">Register for Others</a></div>
                                 </div>
                             </div>
                         </article>
@@ -493,7 +510,7 @@
             ></a>
 
         <!-- Twitter -->
-        <a class="btn btn-primary" style="background-color: #55acee;" href="" role="button" target="_blank"
+        <a class="btn btn-primary" style="background-color: #55acee;" href="https://twitter.com/japan_vitta?t=YZ-BV3NMGmT3E8f1_QHQVA&s=09" role="button" target="_blank"
         ><i class="fab fa-twitter"></i
             ></a>
 
@@ -505,9 +522,9 @@
             ></a>
 
         <!-- Linkedin -->
-        <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank"  href="" role="button"
-        ><i class="fab fa-linkedin-in"></i
-            ></a>
+{{--        <a class="btn btn-primary" style="background-color: #0082ca;" target="_blank"  href="" role="button"--}}
+{{--        ><i class="fab fa-linkedin-in"></i--}}
+{{--            ></a>--}}
 
 
 
