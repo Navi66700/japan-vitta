@@ -127,7 +127,7 @@
                 <div class="under-footer">
                     <div id="google_translate_element"></div>
                     <p>Copyright © 2023 Japan Vitta All Rights Reserved.
-                        <br>Powered By: <a href="https://cervustechnologies.com" target="_blank" title="Cervus Technologies">Cervus Technologies</a></p>
+                        <br>Powered By: <a href="#" target="_blank" title="Cervus Technologies">Cervus Technologies</a></p>
                 </div>
             </div>
         </div>
