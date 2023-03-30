@@ -19,7 +19,7 @@
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="card">
                             <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                                <img src="{{asset('storage/jft-lessons-image/'.$food->food_image)}}" class="w-100" />
+                                <img src="{{asset('storage/food-image/'.$food->food_image)}}" class="w-100" />
                                 <a href="#!">
                                     <div class="mask">
                                     </div>
@@ -49,7 +49,7 @@
                                         <figure>
                                             <div class="video-container">
                                                 <iframe
-                                                    src="{{$food_video->food_video}}"
+                                                    src="{{$food_video->food_video_name}}"
                                                     frameborder="0"
                                                     allow="accelerometer; autoplay; encrypted-media; gyroscope;"
                                                     allowfullscreen></iframe>

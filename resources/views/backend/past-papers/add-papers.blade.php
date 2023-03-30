@@ -13,11 +13,11 @@
         @csrf
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Paper Title</label>
-            <input type="text" class="form-control" id="inputName5" name="paper_title" placeholder="Paper Title">
+            <input type="text" class="form-control" id="inputName5" name="paper_title" placeholder="Paper Title" required>
         </div>
         <div class="col-md-6">
             <label for="inputState" class="form-label">Select Level</label>
-            <select id="inputState" class="form-select" name="level">
+            <select id="inputState" class="form-select" name="level" required>
                 <option selected disabled>---Please Select---</option>
                 <option>N5</option>
                 <option>N4</option>
@@ -29,12 +29,12 @@
         <div class="col-md-6">
             <label for="inputNumber" class="col-sm-2 col-form-label">Select PDF</label>
             <div class="col-sm-10">
-                <input class="form-control" type="file"  id="pdfFile" name="pdf_file">
+                <input class="form-control" type="file"  id="pdfFile" name="pdf_file" required>
             </div>
         </div>
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Youtube Link</label>
-            <input type="text" class="form-control" id="youtube_link" name="youtube_link" placeholder="Paper Title">
+            <input type="text" class="form-control" id="youtube_link" name="youtube_link" placeholder="Paper Title" required>
         </div>
 
         <div class="text-center">

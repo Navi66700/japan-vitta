@@ -49,7 +49,7 @@
                                         <figure>
                                             <div class="video-container">
                                                 <iframe
-                                                    src="{{$jft_video->jft_video_link}}"
+                                                    src="{{$jft_video->jft_video_name}}"
                                                     frameborder="0"
                                                     allow="accelerometer; autoplay; encrypted-media; gyroscope;"
                                                     allowfullscreen></iframe>

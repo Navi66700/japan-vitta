@@ -23,23 +23,25 @@
         </div>
 
         <div class="col-md-6">
-            <label for="inputNumber" class="col-sm-2 col-form-label">Select PDF File</label>
-            <div class="col-sm-10">
-                <input class="form-control" id="papers_pdf" name="pdf_file" type="file" >
-                <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/paper-pdf/'.$pastPapers->pdf_file)}}"></iframe>
+            <label for="inputNumber" class="form-label">Select PDF</label>
+            <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile_2()" @if ($pastPapers->pdf_file) @else required @endif />
+
+            <div class="mb-3">
+                <div id="new_image_container">
+                    @if ($pastPapers->pdf_file)
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/paper-pdf/'.$pastPapers->pdf_file)}}"></iframe>
+
+                    @else
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="#"></iframe>
+
+                    @endif
+                </div>
             </div>
         </div>
-
         <div class="col-md-6">
             <label for="inputName5" class="form-label">Youtube Link</label>
             <input type="text" class="form-control" id="inputName5" placeholder="Youtube Link" name="youtube_link" value="{{ $pastPapers->youtube_link }}">
         </div>
-{{--        <div class="col-md-12">--}}
-{{--            <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>--}}
-{{--            <div class="col-sm-10">--}}
-{{--                <input class="form-control" type="file" id="formFile">--}}
-{{--            </div>--}}
-{{--        </div>--}}
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
@@ -48,15 +50,35 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
+
     $(document).ready(function(e) {
-    $('#papers_pdf').change(function() {
-    let reader = new FileReader();
-    reader.onload = (e) => {
-    $('#preview_pdf').attr('src', e.target.result);
-    }
-    reader.readAsDataURL(this.files[0]);
+    $('#pdf_file').change(function() {
+            let reader = new FileReader();
+            reader.onload = (e) => {
+            $('#pdf_file_preview').attr('src', e.target.result);
+        }
+            reader.readAsDataURL(this.files[0]);
+        });
     });
-    });
+
+    function uploadFile() {
+            var pdf_file_preview = document.getElementById("pdf_file_preview");
+            var file = document.querySelector("input[type=file]").files[0];
+
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                pdf_file_preview.src = reader.result;
+                document.getElementById("base64").value = reader.result;
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+
+            } else {
+                pdf_file_preview.src = "";
+
+            }
+        }
 
     $(".alert").fadeTo(2000, 500).slideUp(500, function(){
         $(".alert").slideUp(500);

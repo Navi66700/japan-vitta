@@ -52,20 +52,26 @@ class PastPaperController extends Controller
 
     }
 
+    public function uploadPastPaperPdf(Request $request) {
+        $file = $request->file('pdf_file');
+        $destinationPath = 'storage/paper-pdf';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        return $file->getClientOriginalName();
+    }
+
 
     public function updatePaper(Request $request)
     {
-        pastPaper::where('id', $request->paper_id)->update([
-            'paper_title' => $request->paper_title,
-            'level' => $request->level,
-        ]);
-        $request->file('pdf_file')->store('public/paper-pdf');
-        $pdf_file = $request->file('pdf_file')->hashName();
+        $pastpapers = pastPaper::find($request->paper_id);
+        $pastpapers->paper_title = $request->paper_title;
+        $pastpapers->level = $request->level;
 
-        pastPaper::where('id', $request->paper_id)->update([
+        if($request->has('pdf_file')){
+            $pastPaperpdfpath = self::uploadPastPaperPdf($request);
+            $pastpapers->pdf_file = $pastPaperpdfpath;
+        }
+        $pastpapers->update();
 
-            'pdf_file' => $pdf_file
-        ]);
         return redirect()->back()->with('success', 'Lesson updated successfully !!!');
     }
 
