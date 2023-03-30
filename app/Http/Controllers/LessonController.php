@@ -87,29 +87,39 @@ class LessonController extends Controller
         ]);
     }
 
+
+    public function uploadLessonPDFN5N4(Request $request) {
+        $file = $request->file('pdf_file');
+        $destinationPath = 'storage/lessons-pdf';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        return $file->getClientOriginalName();
+    }
+
+    public function uploadLessonImageN5N4(Request $request) {
+        $file = $request->file('lesson_image');
+        $destinationPath = 'storage/lessons-image';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        return $file->getClientOriginalName();
+    }
+
     public function updateLesson(Request $request)
     {
-        lesson::where('id',$request->lesson_id)->update([
-            'lesson_title' =>$request->lesson_title,
-            'level' =>$request->level,
-            'description' =>$request->description,
-            'youtube_video_link' =>$request->youtube_video_link,
+        $lessons = lesson::find($request->lesson_id);
+        $lessons->lesson_title = $request->lesson_title;
+        $lessons->level = $request->level;
+        $lessons->description = $request->description;
+        $lessons->youtube_video_link = $request->youtube_video_link;
 
-        ]);
-
-        $request->file('lesson_image')->store('public/lessons-image');
-        $request->file('pdf_file')->store('public/lessons-pdf');
-
-        $lesson_image = $request->file('lesson_image')->hashName();
-        $pdf_file = $request->file('pdf_file')->hashName();
-
-        lesson::where('id',$request->lesson_id)->update([
-            'lesson_image' => $lesson_image,
-            'pdf_file' => $pdf_file
-        ]);
-
+        if($request->has('pdf_file')){
+            $lessonpdfpath = self::uploadLessonPDFN5N4($request);
+            $lessons->pdf_file = $lessonpdfpath;
+        }
+        if($request->has('lesson_image')){
+            $lessonimgpath = self::uploadLessonImageN5N4($request);
+            $lessons->lesson_image = $lessonimgpath;
+        }
+        $lessons->update();
         return redirect()->back()->with('success', 'Lesson updated successfully !!!');
-
     }
 
 
@@ -127,6 +137,7 @@ class LessonController extends Controller
         return $file->getClientOriginalName();
       }
 
+
     public function updateLessonN3N2N1(Request $request)
     {
         $lessons_n3_n2_n1 = LessonN3N2N1::find($request->lesson_id);
@@ -138,7 +149,7 @@ class LessonController extends Controller
           }
           if($request->has('pdf_file')){
             $LessonPdfPath = self::uploadLessonPdf($request);
-            $lessons_n3_n2_n1->lesson_image = $LessonPdfPath;
+            $lessons_n3_n2_n1->pdf_file = $LessonPdfPath;
           }
          $lessons_n3_n2_n1->update();
          return redirect()->back()->with('success', 'Lesson Updated Successfully');

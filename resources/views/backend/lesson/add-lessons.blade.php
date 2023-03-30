@@ -23,19 +23,6 @@
                 <option>N4</option>
             </select>
         </div>
-
-{{--        <div class="col-md-12">--}}
-{{--            <div class="card">--}}
-{{--                <div class="card-body">--}}
-{{--                    <label for="inputAddress5" class="form-label">Description</label>--}}
-{{--                    <!-- Quill Editor Default -->--}}
-{{--                    <div class="quill-editor-default">--}}
-{{--                        <input class="form-control" type="text" id="description" name="description">--}}
-{{--                    </div>--}}
-{{--                    <!-- End Quill Editor Default -->--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
         <div class="col-md-12">
             <label for="inputName5" class="form-label">Description</label>
             <textarea class="form-control" placeholder="Description" id="floatingTextarea" name="description" style="height: 100px;" required></textarea>

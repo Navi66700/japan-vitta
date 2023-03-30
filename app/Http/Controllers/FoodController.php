@@ -74,8 +74,6 @@ class FoodController extends Controller
 
     }
 
-
-
     public function uploadFoodPDF(Request $request) {
         $file = $request->file('pdf_file');
         $destinationPath = 'storage/food-pdf';

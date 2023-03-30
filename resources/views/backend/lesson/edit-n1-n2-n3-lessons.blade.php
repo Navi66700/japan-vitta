@@ -24,21 +24,16 @@
         <div class="col-md-6">
             <label for="inputNumber" class="col-sm-2 col-form-label">Select Image File</label>
             <div class="col-sm-10">
-                <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile()" @if ($lessons_n3_n2_n1->lesson_image) @else required @endif />
-                {{-- <input class="form-control" id="lesson_image" name="lesson_image" type="file" id="formFile" value="{{$lessons_n3_n2_n1->lesson_image}}">
-                <img id="preview_image" name="lesson_image" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-image/'.$lessons_n3_n2_n1->lesson_image)}}"> --}}
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <div id="new_image_container">
-                @if ($lessons_n3_n2_n1->lesson_image)
-                <img src="{{asset('storage/lessons-image/'.$lessons_n3_n2_n1->lesson_image)}}" id="lesson_image_preview" name="lesson_image" class="img-fluid rounded" height="100" width="100"></img>
-                    {{-- <img src="{{asset('storage/jft-pdf/'.$jfts->pdf_file)}}" id="new_image_preview" /> --}}
-                @else
-                <img src="#" id="lesson_image_preview" name="lesson_image" class="img-fluid rounded" height="100" width="100"></img>
-                    {{-- <img src="#" id="new_image_preview" /> --}}
-                @endif
+                <input type="file" class="form-control" id="lesson_image" name="lesson_image" onchange="uploadFile()" @if ($lessons_n3_n2_n1->lesson_image) @else required @endif />
+                <div class="mb-3">
+                    <div id="new_image_container">
+                        @if ($lessons_n3_n2_n1->lesson_image)
+                        <img src="{{asset('storage/lessons-image/'.$lessons_n3_n2_n1->lesson_image)}}" id="lesson_image_preview" name="lesson_image" class="img-fluid rounded" height="100" width="100"></img>
+                        @else
+                        <img src="#" id="lesson_image_preview" name="lesson_image" class="img-fluid rounded" height="100" width="100"></img>
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -46,23 +41,17 @@
             <label for="inputNumber" class="col-sm-2 col-form-label">Select PDF File</label>
             <div class="col-sm-10">
                 <input type="file" class="form-control" id="pdf_file" name="pdf_file" onchange="uploadFile_2()" @if ($lessons_n3_n2_n1->pdf_file) @else required @endif />
-                {{-- <input class="form-control" id="lessons_pdf" name="pdf_file" type="file" value="{{$lessons_n3_n2_n1->pdf_file}}">
-                <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-pdf/'.$lessons_n3_n2_n1->pdf_file)}}"></iframe> --}}
+                <div class="mb-3">
+                    <div id="new_image_container">
+                        @if ($lessons_n3_n2_n1->pdf_file)
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-pdf/'.$lessons_n3_n2_n1->pdf_file)}}"></iframe>
+                        @else
+                        <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="#"></iframe>
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="mb-3">
-            <div id="new_image_container">
-                @if ($lessons_n3_n2_n1->pdf_file)
-                <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="{{asset('storage/lessons-pdf/'.$lessons_n3_n2_n1->pdf_file)}}"></iframe>
-                    {{-- <img src="{{asset('storage/jft-pdf/'.$jfts->pdf_file)}}" id="new_image_preview" /> --}}
-                @else
-                <iframe id="pdf_file_preview" name="pdf_file" class="img-fluid rounded" height="100" width="100" src="#"></iframe>
-                    {{-- <img src="#" id="new_image_preview" /> --}}
-                @endif
-            </div>
-        </div>
-
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
@@ -77,17 +66,17 @@
             $('#lesson_image').change(function() {
                 let reader = new FileReader();
                 reader.onload = (e) => {
-                    $('#preview_image').attr('src', e.target.result);
+                    $('#lesson_image_preview').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(this.files[0]);
             });
         });
 
         $(document).ready(function(e) {
-            $('#lessons_pdf').change(function() {
+            $('#pdf_file').change(function() {
                 let reader = new FileReader();
                 reader.onload = (e) => {
-                    $('#preview_pdf').attr('src', e.target.result);
+                    $('#pdf_file_preview').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(this.files[0]);
             });
@@ -97,7 +86,7 @@
             $(".alert").slideUp(500);
         });
 
-        
+
         function uploadFile() {
         var image_preview = document.getElementById("lesson_image_preview");
         var file = document.querySelector("input[type=file]").files[0];
