@@ -32,9 +32,9 @@
                             <h4><i class="fa fa-pencil"></i>Lessons</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+                            <p>JLPT / NAT / JLCT / N5 | N4 | N3 | N2 | N1 'PDF' and videos of lessons required for exam levels</p>
+{{--                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>--}}
+{{--                            <div class="scroll-to-section"><a href="#section2">More Info.</a></div>--}}
                         </div>
                     </div>
                 </div>
@@ -46,9 +46,10 @@
                             <h4><i class="fa fa-graduation-cap"></i>Psst Papers</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section3">Details</a></div>
+                            <p>JLPT / NAT / JLCT / N5 | N4 | N3 | N2 | N1 'PDF' and Videos of
+                                previous and guessed question papers required for exam levels</p>
+{{--                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>--}}
+{{--                            <div class="scroll-to-section"><a href="#section3">Details</a></div>--}}
                         </div>
                     </div>
                 </div>
@@ -60,9 +61,9 @@
                             <h4><i class="fa fa-book"></i>SSW</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section4">Read More</a></div>
+                            <p>PDF and Videos of Lessons related to Employment Exams and JFT Exams available under SSW Visa</p>
+{{--                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>--}}
+{{--                            <div class="scroll-to-section"><a href="#section4">Read More</a></div>--}}
                         </div>
                     </div>
                 </div>
