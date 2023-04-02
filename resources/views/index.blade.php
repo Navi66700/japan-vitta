@@ -143,7 +143,7 @@
                 <div class="card-body">
 
                     <center>
-                        <h5 class="card-title">N 05</h5>
+                        <h5 class="card-title">N5</h5>
                         <a href="{{route('view-level-5')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
@@ -159,7 +159,7 @@
                 <div class="card-body">
 
                     <center>
-                        <h5 class="card-title">N 04</h5>
+                        <h5 class="card-title">N4</h5>
                         <a href="{{route('view-level-4')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
@@ -174,7 +174,7 @@
                 <div class="card-body">
 
                     <center>
-                        <h5 class="card-title">N 03</h5>
+                        <h5 class="card-title">N3</h5>
                         <a href="{{route('view-level-3')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
@@ -189,7 +189,7 @@
                 <div class="card-body">
 
                     <center>
-                        <h5 class="card-title">N 02</h5>
+                        <h5 class="card-title">N2</h5>
                         <a href="{{route('view-level-2')}}" type="button" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
@@ -204,7 +204,7 @@
                 <div class="card-body">
 
                     <center>
-                        <h5 class="card-title">N 01</h5>
+                        <h5 class="card-title">N1</h5>
                         <a href="{{route('view-level-1')}}" class="btn btn-warning">View Syllabus</a>
                     </center>
                 </div>
