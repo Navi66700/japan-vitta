@@ -152,7 +152,6 @@ Route::middleware('adminAuth')->group(function () {
 
 
 //Contact Us
-    Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
     Route::get('view-contact', [ContactUsController::class, 'viewContact'])->name('view-contact');
     Route::get('delete-contact/{id}', [ContactUsController::class, 'deleteContact'])->name('delete-contact');
     Route::get('edit-contact/{id}', [ContactUsController::class, 'editContact'])->name('edit-contact');
@@ -160,6 +159,9 @@ Route::middleware('adminAuth')->group(function () {
 
 
 });
+
+//Contact Us
+Route::post('add-contact', [ContactUsController::class, 'addContact'])->name('add-contact');
 
 //Levels
 Route::get('view-level-1', [LessonController::class, 'viewLevelOne'])->name('view-level-1');
