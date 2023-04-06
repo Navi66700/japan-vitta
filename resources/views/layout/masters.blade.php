@@ -102,7 +102,7 @@
                         </div>
                         <li><a style="color: lightgray;" href="#">Colombo, Western Province, Sri Lanka</a></li>
                         <li><a style="color: lightgray;" href="#">info@japanvitta.com</a></li>
-                        <li><a style="color: lightgray;" href="#">+94 77 929 78 81</a></li>
+                        <li><a style="color: lightgray;" href="#">+94 70 308 73 13</a></li>
 {{--                        <li><a style="color: lightgray;" href="#">+94 76 414 96 30</a></li>--}}
                     </ul>
                 </div>
