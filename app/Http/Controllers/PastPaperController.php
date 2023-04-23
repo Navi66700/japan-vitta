@@ -65,6 +65,7 @@ class PastPaperController extends Controller
         $pastpapers = pastPaper::find($request->paper_id);
         $pastpapers->paper_title = $request->paper_title;
         $pastpapers->level = $request->level;
+        $pastpapers->youtube_link = $request->youtube_link;
 
         if($request->has('pdf_file')){
             $pastPaperpdfpath = self::uploadPastPaperPdf($request);

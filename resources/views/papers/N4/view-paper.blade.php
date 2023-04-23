@@ -18,7 +18,7 @@
                 <div class="col-md-6 text-center">
                     <div class="left-content">
                         <iframe id="preview_pdf" name="pdf_file" class="img-fluid rounded" style="width: 300px; height: 500px;" src="{{asset('storage/paper-pdf/'.$paperfourDetails->pdf_file)}}"></iframe>
-                        <div class="main-button"><a rel="nofollow" href="{{url('/pdf-download-paper-4', $paperfourDetails->id)}}">Download Lesson</a></div>
+                        <div class="main-button"><a rel="nofollow" href="{{url('/pdf-download-paper-4', $paperfourDetails->id)}}">Download Book</a></div>
                     </div>
                 </div>
                 {{--                <div class="col-md-6">--}}

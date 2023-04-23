@@ -32,7 +32,7 @@
                                 <a href="" class="text-reset">
                                     <h5 class="card-title mb-3">{{$leveltwo->lesson_title}}</h5>
                                 </a>
-                                <a rel="nofollow" class="btn btn-warning" href="{{url('/level-2-pdf-download', $leveltwo->id)}}">Download Lesson</a>
+                                <a rel="nofollow" class="btn btn-warning" href="{{url('/level-2-pdf-download', $leveltwo->id)}}">Download Book</a>
                             </div>
                         </div>
                     </div>
